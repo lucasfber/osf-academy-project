@@ -1,0 +1,58 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+}
+
+.icon-pointer {
+  cursor: pointer;
+}
+
+.icon [class^=flaticon-]::before,
+.icon [class^=flaticon-]::after {
+  font-size: 20px;
+  margin: 0;
+}
+
+.icon-md [class^=flaticon-]::before,
+.icon-md [class^=flaticon-]::after {
+  font-weight: bold;
+}
+
+.icon-sm [class^=flaticon-]::before,
+.icon-sm [class^=flaticon-]::after {
+  font-size: 10px;
+}
+
+.icon-light [class^=flaticon-]::before,
+.icon-light [class^=flaticon-]::after {
+  color: #67696f;
+}
+
+.btn-menu {
+  display: none;
+}
+
+.header-main {
+  display: flex;
+  padding: 10px 16px;
+  align-items: center;
+}
+
+.logo {
+  justify-items: auto;
+  margin: 0 auto;
+}
+
+.logo__brand-box {
+  display: none;
+}
+
+.navbar {
+  background-color: #262a32;
+  max-width: 100%;
+  padding: 15px;
+}

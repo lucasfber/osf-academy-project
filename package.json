@@ -1,0 +1,15 @@
+{
+  "name": "osf-academy-project",
+  "version": "1.0.0",
+  "description": "A e-commerce website for OSF's Academy ",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch --no-source-map sass:dist/"
+  },
+  "author": "Lucas Bertoldo",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.22.9",
+    "sass-autoprefixer": "^1.0.1"
+  }
+}
