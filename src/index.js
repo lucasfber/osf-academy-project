@@ -3,14 +3,24 @@ import $ from '../node_modules/jquery/dist/jquery';
 
 $(document).ready(function() {
   const dropdown = $('.navbar ul li');
-  const btnMenu = $('.btn-menu');
-  const btnClose = $('.btn-close');
-  const menu = $('.menu');
+  const headerMain = $('.header-main');
+  const btnMenu = $('.btn-close');
+  const btnClose = $('.btn-menu');
+  const navbar = $('.navbar');
+  const menuItem = $('.menu__menu-item h4');
   let togglerPassword = $('#toggler');
   let inputPassword = $('#password');
   let userIcon = $('.flaticon-man');
   let modalLogin = $('.modal-login');
   let modalLoginForm = $('.modal-login__form'); // is this variable really necessary?
+
+  menuItem.click(function(e) {
+    e.stopPropagation();
+    $(this)
+      .parent()
+      .children('.menu__submenu')
+      .toggle();
+  });
 
   function setCurrentYear() {
     let currentYear = $('#current-year');
@@ -20,7 +30,7 @@ $(document).ready(function() {
   function toggleMenu() {
     btnMenu.toggle();
     btnClose.toggle();
-    menu.toggle();
+    navbar.toggle();
   }
 
   function toggleDropdown(e) {
@@ -40,16 +50,20 @@ $(document).ready(function() {
   }
 
   function showModal() {
+    headerMain.css('z-index', 0);
     modalLogin.css('display', 'flex');
   }
 
   function handleClickOutsideModal() {
     $(window).click(function() {
       $('.dropdown').hide();
+      // console.log(headerMain.css('z-index'));
+      /** AO MOSTRAR O MENU DA NAVBAR SETAR O Z-INDEX DO MAIN-HEADER DE VOLTA PRA 2 */
     });
   }
 
   btnMenu.click(toggleMenu);
+
   btnClose.click(toggleMenu);
 
   modalLogin.click(function(e) {

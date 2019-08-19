@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
   list-style: none;
 }
 .header {
@@ -169,7 +169,7 @@
 
 .dropdown-content a::after {
   display: table;
-  content: "";
+  content: '';
   width: 70%;
   height: 1px;
   background-color: #ddd;
@@ -286,7 +286,7 @@
 
 .modal-login__form {
   width: 500px;
-  height: 470px;
+  height: 300px;
   border-radius: 5px;
   padding: 40px;
   background-color: #fff;
@@ -409,7 +409,7 @@
 .main-header::before,
 .main-header::after {
   display: table;
-  content: "";
+  content: '';
   width: 44%;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.1);
@@ -447,8 +447,8 @@
 }
 
 .main-content__warning::after {
-  content: "";
-  background: url("../img/caution-sign.png") no-repeat;
+  content: '';
+  background: url('../img/caution-sign.png') no-repeat;
   background-size: 360px;
   position: absolute;
   top: 0;
