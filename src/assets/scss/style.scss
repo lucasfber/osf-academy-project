@@ -65,8 +65,6 @@ i.icon-light::after {
 }
 .badge {
   display: inline-block;
-  border: 2px solid $light-green;
-  background-color: #fff;
   color: $light-green;
   font-weight: bold;
   border-radius: 50%;
@@ -101,7 +99,7 @@ i.icon-light::after {
 
     .action-bar {
       position: fixed;
-      background-color: #262a32;
+      background-color: $bg-dark;
       color: #fff;
       bottom: 0;
       left: 0;
@@ -117,8 +115,35 @@ i.icon-light::after {
             margin-right: 0;
           }
 
+          &:hover {
+            span {
+              i {
+                &::after,
+                &::before {
+                  color: $light-green;
+                }
+              }
+            }
+          }
+
           .icon-light::before {
             color: $light-gray;
+          }
+
+          .badge {
+            border: 2px solid $light-green;
+            background-color: $bg-dark;
+          }
+
+          &:hover {
+            span {
+              i {
+                &::after,
+                &::before {
+                  color: $light-green;
+                }
+              }
+            }
           }
         }
       }
@@ -140,7 +165,7 @@ i.icon-light::after {
   // NAVBAR
 
   .navbar {
-    background-color: #262a32;
+    background-color: $bg-dark;
     padding: 15px;
     width: 100%;
     position: absolute;
@@ -422,12 +447,28 @@ i.icon-light::after {
         display: inline-block;
         margin-right: 36px;
         position: relative;
+
         &:last-child {
           margin-right: 0;
         }
 
+        &:hover {
+          span {
+            i {
+              &::after,
+              &::before {
+                color: #222;
+              }
+            }
+          }
+        }
         i::before {
           color: $lighter-gray;
+        }
+
+        .badge {
+          border: 2px solid $light-green;
+          background-color: #fff;
         }
       }
     }
