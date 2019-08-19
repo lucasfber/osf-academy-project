@@ -7,6 +7,7 @@ $(document).ready(function() {
   const btnMenu = $('.btn-close');
   const btnClose = $('.btn-menu');
   const navbar = $('.navbar');
+  const navbarLink = $('.navbar ul li a');
   const menuItem = $('.menu__menu-item h4');
   let togglerPassword = $('#toggler');
   let inputPassword = $('#password');
@@ -19,6 +20,14 @@ $(document).ready(function() {
     $(this)
       .parent()
       .children('.menu__submenu')
+      .toggle();
+  });
+
+  navbarLink.click(function(e) {
+    e.preventDefault();
+    $(this)
+      .parent()
+      .children('.menu')
       .toggle();
   });
 
