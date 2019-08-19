@@ -247,4 +247,40 @@
       }
     }
   }
+
+  // FOOTER
+  footer {
+    padding: 20px 16px;
+    font-size: 13px;
+    .contact,
+    .categories {
+      h4 {
+        margin: 24px 0;
+        position: relative;
+        span {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      .contact__contact-wrapper {
+        p {
+          margin-bottom: 24px;
+          font-size: 13px;
+          color: #45413e;
+        }
+      }
+
+      .categories {
+        li {
+          margin-bottom: 10px;
+
+          a {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
 }
