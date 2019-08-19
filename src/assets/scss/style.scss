@@ -1,4 +1,4 @@
-@import "./base";
+@import './base';
 
 $light-gray: rgba(255, 255, 255, 0.5);
 $lighter-gray: rgba(0, 0, 0, 0.5);
@@ -10,7 +10,7 @@ $light-green: #84bc22;
 $border-radius-img: 6px;
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 
 span.icon {
@@ -28,8 +28,8 @@ span.icon {
   cursor: pointer;
 }
 
-.icon [class^="flaticon-"]::before,
-.icon [class^="flaticon-"]::after {
+.icon [class^='flaticon-']::before,
+.icon [class^='flaticon-']::after {
   font-size: 20px;
   margin: 0;
 }
@@ -295,9 +295,9 @@ i.icon-light::after {
 
         &:nth-child(5),
         &:nth-child(6) {
-          a {
+          > a {
             padding: 20px 15px;
-            margin-right: 10px;
+            margin-right: 0;
             color: $lighter-gray;
             span {
               margin-left: 16px;
@@ -312,6 +312,51 @@ i.icon-light::after {
                 &::after,
                 &::before {
                   color: #fff;
+                }
+              }
+            }
+          }
+          .dropdown {
+            position: relative;
+            display: none;
+            .dropdown__content {
+              position: absolute;
+              min-width: 90px;
+              text-align: center;
+              z-index: 2;
+              top: 20px;
+              left: 50%;
+              transform: translateX(-50%);
+              border-radius: 2px;
+              background-color: #fff;
+              border: 1px solid rgba(0, 0, 0, 0.2);
+
+              a {
+                display: block;
+                padding: 5px 0 0 0;
+                color: rgba(0, 0, 0, 0.4);
+                position: relative;
+
+                &:hover {
+                  color: rgba(0, 0, 0, 0.9);
+                  background-color: #ddd;
+                }
+
+                &::after {
+                  display: table;
+                  content: '';
+                  width: 70%;
+                  height: 1px;
+                  background-color: #ddd;
+                  position: absolute;
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+              }
+
+              a:nth-child(3) {
+                &::after {
+                  display: none;
                 }
               }
             }

@@ -4,8 +4,8 @@
   "description": "A e-commerce website for OSF's Academy ",
   "main": "index.js",
   "scripts": {
-    "start": "webpack",
-    "sass": "sass --watch --no-source-map sass:dist/"
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
   },
   "author": "Lucas Bertoldo",
   "license": "MIT",
