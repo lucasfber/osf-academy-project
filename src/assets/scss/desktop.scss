@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 10px 55px;
+    border-bottom: 2px solid #ddd;
 
     .header-main {
       .btn-menu,
@@ -46,10 +47,18 @@
         display: inline-block;
 
         &:hover {
+          > a {
+            background-color: $bg-dark-2;
+            color: #fff;
+            font-weight: bold;
+            padding-bottom: 30px;
+            border-bottom: 3px solid $light-green;
+          }
           .menu {
             display: flex;
           }
         }
+
         > a {
           padding: 20px 15px;
           margin-right: 10px;
@@ -58,11 +67,11 @@
             margin-left: 16px;
           }
           &:hover {
-            background-color: $bg-dark-2;
+            /*             background-color: $bg-dark-2;
             color: #fff;
             font-weight: bold;
             padding-bottom: 30px;
-            border-bottom: 3px solid $light-green;
+            border-bottom: 3px solid $light-green; */
 
             i.icon-lighter {
               &::after,
@@ -132,7 +141,7 @@
 
                 &::after {
                   display: table;
-                  content: '';
+                  content: "";
                   width: 70%;
                   height: 1px;
                   background-color: #ddd;
