@@ -4,7 +4,7 @@
     background-color: #fff;
     max-width: 100%;
 
-    .header-main {
+    .header__container {
       display: flex;
       padding: 10px 16px;
       align-items: center;
@@ -294,6 +294,60 @@
       li {
         display: inline-block;
         color: #b2b2b2;
+      }
+    }
+  }
+
+  // MAIN
+  main {
+    margin-top: 83px;
+    padding: 30px 0;
+    background-color: $main-background;
+
+    .container {
+      max-width: 768px;
+      margin: 0 5%;
+
+      .content {
+        text-align: center;
+
+        .breadcrumb {
+          margin: 28px 0;
+
+          .breadcrumb__separator {
+            margin: 0 14px;
+          }
+
+          .breadcrumb__active {
+            color: #84bc22;
+          }
+        }
+
+        .warning {
+          background-color: red;
+          z-index: 0;
+          .warning__image {
+            position: relative;
+            height: 360px;
+            background-color: #beb7b7;
+            border: 1px solid #9fcb51;
+            z-index: 0;
+          }
+
+          .warning__image::before {
+            display: table;
+            content: '';
+            background: url('../images/caution-sign.png') no-repeat;
+            background-size: 280px;
+            position: absolute;
+            z-index: 10;
+            min-width: 300px;
+            height: 300px;
+            top: 64px;
+            left: -40px;
+            z-index: 0;
+          }
+        }
       }
     }
   }

@@ -6,6 +6,7 @@ $bg-dark: #262a32;
 $bg-dark-2: #252931;
 $blue: #011847;
 $light-green: #84bc22;
+$main-background: #f0ecea;
 
 $border-radius-img: 6px;
 
@@ -76,6 +77,25 @@ i.icon-light::after {
   position: absolute;
   bottom: 16px;
   left: 15px;
+}
+
+.main-header {
+  position: relative;
+}
+
+.main-header::before,
+.main-header::after {
+  display: table;
+  content: '';
+  width: 35%;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 50%;
+}
+
+.main-header::after {
+  right: 0;
 }
 
 @import './mobile';
