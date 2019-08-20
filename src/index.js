@@ -7,6 +7,7 @@ $(document).ready(function() {
   const btnMenu = $('.btn-close');
   const btnClose = $('.btn-menu');
   const navbar = $('.navbar');
+  const footerHeader = $('footer h4');
   const navbarLink = $('.navbar ul li a');
   const menuItem = $('.menu__menu-item h4');
   let togglerPassword = $('#toggler');
@@ -21,6 +22,19 @@ $(document).ready(function() {
       .parent()
       .children('.menu__submenu')
       .toggle();
+  });
+
+  footerHeader.click(function() {
+    $(this)
+      .parent()
+      .children('.wrapper')
+      .toggle();
+
+    $(this)
+      .children('span.icon')
+      .children('i')
+      .toggleClass('flaticon-caret-down')
+      .toggleClass('flaticon-arrow');
   });
 
   navbarLink.click(function(e) {

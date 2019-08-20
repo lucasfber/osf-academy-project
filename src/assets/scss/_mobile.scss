@@ -254,6 +254,7 @@
     padding: 20px 16px 0 16px;
     margin-bottom: 114px;
     font-size: 13px;
+
     .contact,
     .categories,
     .about {
@@ -267,20 +268,21 @@
         }
       }
 
+      .wrapper {
+        display: none;
+        p {
+          margin-bottom: 24px;
+          font-size: 13px;
+          color: #45413e;
+        }
+      }
+
       .link-box {
         li {
           margin-bottom: 10px;
           a {
             padding: 10px 20px 0 0;
           }
-        }
-      }
-
-      .contact__contact-wrapper {
-        p {
-          margin-bottom: 24px;
-          font-size: 13px;
-          color: #45413e;
         }
       }
     }
