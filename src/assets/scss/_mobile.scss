@@ -25,6 +25,7 @@
       left: 0;
       width: 100%;
       padding: 10px 20px;
+      z-index: 2;
       ul {
         text-align: center;
         li {
@@ -250,10 +251,12 @@
 
   // FOOTER
   footer {
-    padding: 20px 16px;
+    padding: 20px 16px 0 16px;
+    margin-bottom: 114px;
     font-size: 13px;
     .contact,
-    .categories {
+    .categories,
+    .about {
       h4 {
         margin: 24px 0;
         position: relative;
@@ -264,6 +267,15 @@
         }
       }
 
+      .link-box {
+        li {
+          margin-bottom: 10px;
+          a {
+            padding: 10px 20px 0 0;
+          }
+        }
+      }
+
       .contact__contact-wrapper {
         p {
           margin-bottom: 24px;
@@ -271,14 +283,16 @@
           color: #45413e;
         }
       }
+    }
 
-      .categories {
-        li {
-          margin-bottom: 10px;
+    .social {
+      text-align: center;
+      margin-top: 25px;
+      li {
+        display: inline-block;
 
-          a {
-            padding: 10px;
-          }
+        i {
+          color: $lighter-gray;
         }
       }
     }
