@@ -135,7 +135,7 @@
 
                 &::after {
                   display: table;
-                  content: "";
+                  content: '';
                   width: 70%;
                   height: 1px;
                   background-color: #ddd;
@@ -322,6 +322,72 @@
             }
           }
         }
+      }
+    }
+  }
+
+  footer {
+    padding: 40px 55px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #333;
+    .contact,
+    .categories,
+    .about {
+      h4 {
+        font-weight: bold;
+        span {
+          display: none;
+        }
+      }
+
+      .wrapper {
+        display: block !important;
+        color: #45413e;
+        p {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    .contact-info {
+      margin-right: 60px;
+
+      .contact {
+        margin-top: 36px;
+
+        h4 {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    .categories,
+    .about {
+      h4 {
+        margin-bottom: 30px;
+      }
+      li {
+        margin-bottom: 20px;
+      }
+    }
+
+    .categories {
+      width: 50%;
+      .wrapper {
+        display: flex !important;
+
+        .link-box {
+          width: 33.3%;
+        }
+      }
+    }
+
+    .social {
+      li {
+        display: inline-block;
+        color: #b2b2b2;
       }
     }
   }

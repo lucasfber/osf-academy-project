@@ -254,6 +254,7 @@
     padding: 20px 16px 0 16px;
     margin-bottom: 114px;
     font-size: 13px;
+    color: #333;
 
     .contact,
     .categories,
@@ -270,10 +271,10 @@
 
       .wrapper {
         display: none;
+        color: #45413e;
         p {
           margin-bottom: 24px;
           font-size: 13px;
-          color: #45413e;
         }
       }
 
@@ -292,10 +293,7 @@
       margin-top: 25px;
       li {
         display: inline-block;
-
-        i {
-          color: $lighter-gray;
-        }
+        color: #b2b2b2;
       }
     }
   }
