@@ -14,7 +14,7 @@
       background-color: #fff;
       border-bottom: 2px solid #ddd;
       width: 100%;
-      z-index: 2;
+      z-index: 9;
     }
 
     .action-bar {
@@ -25,7 +25,7 @@
       left: 0;
       width: 100%;
       padding: 10px 20px;
-      z-index: 2;
+      z-index: 9;
       ul {
         text-align: center;
         li {
@@ -60,7 +60,7 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 3;
+            z-index: 10;
             width: 100vw;
             height: 100vh;
             background-color: rgba(0, 0, 0, 0.7);
@@ -172,6 +172,7 @@
     padding: 15px;
     width: 100%;
     position: absolute;
+    z-index: 9;
     top: 81px;
     display: none;
 
@@ -305,7 +306,7 @@
     background-color: $main-background;
 
     .container {
-      max-width: 768px;
+      max-width: 900px;
       margin: 0 5%;
 
       .content {
@@ -324,28 +325,89 @@
         }
 
         .warning {
-          background-color: red;
-          z-index: 0;
-          .warning__image {
+          background-color: #fff;
+          margin-top: 40px;
+          height: 800px;
+
+          .warning__heading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
-            height: 360px;
-            background-color: #beb7b7;
-            border: 1px solid #9fcb51;
             z-index: 0;
+            height: 360px;
+            overflow: hidden;
+
+            h1 {
+              z-index: 10;
+              font-size: 80px;
+              color: $light-green;
+            }
           }
 
-          .warning__image::before {
+          .warning__heading::before {
             display: table;
             content: '';
             background: url('../images/caution-sign.png') no-repeat;
             background-size: 280px;
             position: absolute;
-            z-index: 10;
+            z-index: 0;
             min-width: 300px;
             height: 300px;
             top: 64px;
             left: -40px;
-            z-index: 0;
+          }
+
+          .warning__message {
+            margin-top: 40px;
+            text-align: center;
+
+            h3 {
+              margin: 20px 0;
+            }
+
+            p {
+              margin-bottom: 16px;
+            }
+
+            a {
+              color: $light-green;
+            }
+
+            .warning__form-box {
+              margin-top: 30px;
+
+              h3 {
+                margin: 20px 0;
+              }
+
+              form {
+                position: relative;
+              }
+
+              input {
+                display: block;
+                margin: 0 auto;
+                width: 95%;
+                padding: 6px;
+                padding-left: 13px;
+                border: none;
+                font-size: 14px;
+                border-radius: 24px;
+                outline: none;
+                border: 2px solid #ccc;
+              }
+
+              span {
+                position: absolute;
+                top: 7px;
+                right: 7%;
+
+                i::before {
+                  font-size: 15px;
+                }
+              }
+            }
           }
         }
       }

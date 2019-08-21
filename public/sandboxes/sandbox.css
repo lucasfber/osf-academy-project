@@ -448,7 +448,7 @@
 
 .main-content__warning::after {
   content: '';
-  background: url('../img/caution-sign.png') no-repeat;
+  background: url('./caution-sign.png') no-repeat;
   background-size: 360px;
   position: absolute;
   top: 0;

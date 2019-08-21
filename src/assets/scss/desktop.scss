@@ -10,7 +10,7 @@
     padding: 10px 55px;
     border-bottom: 2px solid #ddd;
 
-    .header__content {
+    .header__container {
       .btn-menu,
       .btn-close {
         display: none;
@@ -390,5 +390,8 @@
         color: #b2b2b2;
       }
     }
+  }
+
+  main {
   }
 }
