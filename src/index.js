@@ -78,11 +78,11 @@ $(document).ready(function() {
   }
 
   function handleClickOutsideModal() {
-    // $(window).click(function() {
-    //   $('.dropdown').hide();
-    //   // console.log(headerMain.css('z-index'));
-    //   /** AO MOSTRAR O MENU DA NAVBAR SETAR O Z-INDEX DO MAIN-HEADER DE VOLTA PRA 2 */
-    // });
+    $(window).click(function() {
+      $('.dropdown').hide();
+      // console.log(headerMain.css('z-index'));
+      /** AO MOSTRAR O MENU DA NAVBAR SETAR O Z-INDEX DO MAIN-HEADER DE VOLTA PRA 2 */
+    });
     $(window).keydown(function(e) {
       const keyCode = e.keyCode;
       if (keyCode == 27) {
