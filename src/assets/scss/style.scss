@@ -98,6 +98,18 @@ i.icon-light::after {
   right: 0;
 }
 
+.breadcrumb {
+  margin: 28px 0;
+}
+
+.breadcrumb__separator {
+  margin: 0 14px;
+}
+
+.breadcrumb__active {
+  color: #84bc22;
+}
+
 @import './mobile';
 @import './tablets.scss';
 @import './desktop.scss';
