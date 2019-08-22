@@ -3,8 +3,17 @@
   margin: 0 auto;
 }
 
+.slide {
+  display: block;
+}
+
 .slide img {
   width: 100%;
+  display: block;
+}
+
+.slide:nth-child(1) img {
+  display: block;
 }
 
 .control {

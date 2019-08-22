@@ -346,8 +346,8 @@
 
           .warning__heading::before {
             display: table;
-            content: "";
-            background: url("../images/caution-sign.png") no-repeat;
+            content: '';
+            background: url('../images/caution-sign.png') no-repeat;
             background-size: 280px;
             position: absolute;
             z-index: 0;
@@ -416,7 +416,10 @@
         max-width: 100%;
         min-height: 470px;
         background-color: pink;
-        background: url("../images/slide-1.png") no-repeat center right / cover;
+        background: url('../images/slide-1.png');
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: cover;
 
         h1 {
           margin-bottom: 52px;
@@ -431,13 +434,18 @@
         .carousel__controls {
           text-align: center;
           margin-top: 70px;
+
           .carousel__controls-dot {
             display: inline-block;
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(255, 255, 255, 0.7);
             margin: 5px;
+
+            &:active {
+              background-color: rgba(255, 255, 255, 0.4);
+            }
           }
           .active {
             position: relative;
@@ -445,6 +453,10 @@
             border: 3px solid #fff;
             width: 14px;
             height: 14px;
+
+            &:active {
+              background-color: blue;
+            }
           }
         }
 
@@ -458,8 +470,16 @@
         }
       }
 
-      .text-left {
+      .align-0 {
         text-align: left;
+      }
+
+      .align-1 {
+        text-align: center;
+      }
+
+      .align-2 {
+        text-align: right;
       }
 
       .summer-sales-box {
