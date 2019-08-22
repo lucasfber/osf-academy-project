@@ -1,0 +1,21 @@
+.slider-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.slide img {
+  width: 100%;
+}
+
+.control {
+  text-align: center;
+}
+.dot {
+  cursor: pointer;
+  margin-right: 20px;
+  background-color: blue;
+}
+
+.active {
+  background-color: lightseagreen;
+}
