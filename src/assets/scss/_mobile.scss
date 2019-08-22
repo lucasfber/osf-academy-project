@@ -439,6 +439,13 @@
 
         h1 {
           margin-bottom: 52px;
+          font-size: 28px;
+          color: #fff;
+        }
+
+        p {
+          font-size: 14px;
+          color: #fff;
         }
 
         .button-box {
@@ -505,8 +512,109 @@
     }
 
     .popular-items {
-      height: 400px; //change
+      padding: 32px 16px 16px 16px;
       background-color: $bg-dark;
+      text-align: center;
+
+      h3 {
+        color: #fff;
+        position: relative;
+        &::after,
+        &::before {
+          display: table;
+          content: '';
+          width: 20%;
+          height: 2px;
+          background-color: rgba(#fff, 0.3);
+          position: absolute;
+          top: 50%;
+        }
+
+        &::after {
+          right: 0;
+        }
+      }
+
+      .products__product-tile {
+        margin: 20px auto;
+        position: relative;
+        max-width: 370px;
+
+        .products__product-image {
+          img {
+            max-width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+          }
+        }
+        .products__product-info {
+          max-width: 370px;
+          background-color: #fff;
+          text-align: center;
+          padding-bottom: 22px;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          margin: 0 auto;
+
+          p {
+            font-size: 16px;
+            line-height: 18px;
+            color: $gray-color-font;
+            padding-top: 20px;
+          }
+
+          span {
+            font-size: 14px;
+            color: $blue;
+            font-weight: 400;
+            display: inline-block;
+            padding-top: 20px;
+          }
+        }
+
+        .products__overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          height: 100%;
+          width: 100%;
+          background-color: rgba($layer-green, 0.8);
+          display: none;
+          align-items: center;
+          justify-content: center;
+          border-radius: 5px;
+
+          .button-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .button-layer {
+              width: 90px;
+              height: 90px;
+              text-align: center;
+              border-radius: 50%;
+              background-color: #fff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+
+              &:nth-child(1) {
+                margin-right: 30px;
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .products__overlay {
+            display: flex;
+          }
+        }
+      }
     }
   }
 }
