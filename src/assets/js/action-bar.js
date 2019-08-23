@@ -18,10 +18,10 @@ buttonBuyNow.click(addToShoppingBag);
 /**
  * Increases the number of the Wishlist's badge by 1.
  */
-export const addToWishlist = function() {
+function addToWishlist() {
   countWishlistItems = countWishlistItems + 1;
   badgeWishlist.text(countWishlistItems);
-};
+}
 
 /**
  * Increases the number of the Shopping Bag's badge by 1.

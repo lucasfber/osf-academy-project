@@ -516,6 +516,10 @@
       background-color: $bg-dark;
       text-align: center;
 
+      .products-wrapper {
+        display: none;
+      }
+
       .products-slider__controls {
         text-align: center;
         margin-top: 40px;
