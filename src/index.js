@@ -1,6 +1,7 @@
 import './assets/scss/style.scss';
 import $ from '../node_modules/jquery/dist/jquery';
 import './assets/js/carousel';
+import './assets/js/carousel-products';
 
 $(document).ready(function() {
   const dropdown = $('.navbar ul li');
