@@ -18,16 +18,3 @@ function setCurrentSlide(e) {
 }
 
 dots.click(setCurrentSlide);
-
-// dots.click(function() {
-//   index = $(this).index();
-//   dots.removeClass();
-//   dots.addClass('carousel__controls-dot');
-
-//   $(this)
-//     .removeClass()
-//     .addClass('carousel__controls-dot active');
-
-//   carouselSlide.css('background-image', `url(./img/slide-${index}.png)`);
-//   carouselSlide.removeClass().addClass(`carousel align-${index}`);
-// });

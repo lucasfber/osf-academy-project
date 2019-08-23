@@ -346,8 +346,8 @@
 
           .warning__heading::before {
             display: table;
-            content: '';
-            background: url('../images/caution-sign.png') no-repeat;
+            content: "";
+            background: url("../images/caution-sign.png") no-repeat;
             background-size: 280px;
             position: absolute;
             z-index: 0;
@@ -432,7 +432,7 @@
         max-width: 100%;
         min-height: 470px;
         border-radius: 5px;
-        background: url('../images/slide-1.png');
+        background: url("../images/slide-1.png");
         background-repeat: no-repeat;
         background-position: center right;
         background-size: cover;
@@ -522,7 +522,7 @@
         &::after,
         &::before {
           display: table;
-          content: '';
+          content: "";
           width: 20%;
           height: 2px;
           background-color: rgba(#fff, 0.3);
@@ -539,6 +539,12 @@
         margin: 20px auto;
         position: relative;
         max-width: 370px;
+
+        &:hover {
+          .overlay {
+            display: flex;
+          }
+        }
 
         .products__product-image {
           img {
@@ -572,7 +578,7 @@
           }
         }
 
-        .products__overlay {
+        .overlay {
           position: absolute;
           top: 0;
           left: 0;
@@ -580,11 +586,19 @@
           right: 0;
           height: 100%;
           width: 100%;
-          background-color: rgba($layer-green, 0.8);
-          display: none;
+          display: flex;
           align-items: center;
           justify-content: center;
           border-radius: 5px;
+          display: none;
+        }
+
+        .overlay--green {
+          background: linear-gradient(
+            0deg,
+            rgba(#1bc167, 0.8),
+            rgba(#2dd3a1, 0.8)
+          );
 
           .button-box {
             display: flex;
@@ -609,11 +623,20 @@
           }
         }
 
-        &:hover {
+        .overlay--pink {
+          display: flex;
+          background: linear-gradient(
+            0deg,
+            rgba(#675b99, 0.8),
+            rgba(#dc5886, 0.8)
+          );
+        }
+
+        /*         &:hover {
           .products__overlay {
             display: flex;
           }
-        }
+        } */
       }
     }
   }
