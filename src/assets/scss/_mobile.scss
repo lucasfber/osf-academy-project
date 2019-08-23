@@ -535,6 +535,72 @@
         }
       }
 
+      .product-tile {
+        margin: 20px auto;
+        position: relative;
+        max-width: 370px;
+
+        &:hover {
+          .overlay {
+            display: flex;
+          }
+        }
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+      }
+
+      .product-tile--static {
+        margin: 20px auto;
+        position: relative;
+        max-width: 370px;
+        height: 308px;
+        max-height: 389px;
+
+        img {
+          max-width: 100%;
+          max-height: 389px;
+          height: 100%;
+          border-radius: 5px;
+        }
+
+        .overlay--pink {
+          display: flex;
+          background: linear-gradient(
+            0deg,
+            rgba(#675b99, 0.8),
+            rgba(#dc5886, 0.8)
+          );
+          color: #fff;
+          padding: 38px 30px;
+          align-items: flex-end;
+
+          img {
+            width: 26px;
+            height: 26px;
+          }
+
+          .overlay--pink__content {
+            text-align: left;
+
+            p {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+
       .products__product-tile {
         margin: 20px auto;
         position: relative;
@@ -597,21 +663,6 @@
           }
         }
 
-        .overlay {
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          height: 100%;
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 5px;
-          display: none;
-        }
-
         .overlay--green {
           background: linear-gradient(
             0deg,
@@ -640,15 +691,6 @@
               }
             }
           }
-        }
-
-        .overlay--pink {
-          display: flex;
-          background: linear-gradient(
-            0deg,
-            rgba(#675b99, 0.8),
-            rgba(#dc5886, 0.8)
-          );
         }
 
         /*         &:hover {
