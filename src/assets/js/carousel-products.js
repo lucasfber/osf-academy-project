@@ -1,34 +1,37 @@
 import $ from '../../../node_modules/jquery/dist/jquery.slim';
 
-let dots = $('.products-slider__dot');
-let productsSlides = $('.products-slider__content');
+const dots = $('.products-slider__dot');
+const productsSlides = $('.products-slider__content');
 
-let index;
+setFirstSlideVisible();
 
-productsSlides
-  .children()
-  .eq(0)
-  .css('display', 'block');
+dots.click(setCurrentSlide);
 
 function setCurrentSlide(e) {
   productsSlides.children().css('display', 'none');
 
-  index = $(e.currentTarget).index();
+  const index = $(e.currentTarget).index();
 
-  // setting dot active
+  setActiveDot(e);
+
+  productsSlides
+    .children()
+    .eq(index)
+    .css('display', 'block');
+}
+
+function setActiveDot(e) {
   dots.removeClass();
   dots.addClass('products-slider__dot');
 
   $(e.currentTarget)
     .removeClass()
     .addClass('products-slider__dot active');
-
-  productsSlides
-    .children()
-    .eq(index)
-    .css({ display: 'block', color: 'purple' });
-  // carouselSlide.css('background-image', `url(./img/slide-${index}.png)`);
-  // carouselSlide.removeClass().addClass(`carousel align-${index}`);
 }
 
-dots.click(setCurrentSlide);
+function setFirstSlideVisible() {
+  productsSlides
+    .children()
+    .eq(0)
+    .css('display', 'block');
+}

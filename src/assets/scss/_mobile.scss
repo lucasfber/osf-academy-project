@@ -519,7 +519,6 @@
       .products-slider__controls {
         text-align: center;
         margin-top: 40px;
-        border: 1px solid red;
 
         .products-slider__dot {
           display: inline-block;
@@ -591,10 +590,10 @@
           max-width: 370px;
           background-color: #fff;
           text-align: center;
-          padding-bottom: 22px;
+          padding: 0 22px 22px 22px;
           border-bottom-left-radius: 5px;
           border-bottom-right-radius: 5px;
-          margin: 0 auto;
+          margin: -3px auto 0 auto;
 
           p {
             font-size: 16px;
