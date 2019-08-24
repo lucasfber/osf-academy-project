@@ -346,8 +346,8 @@
 
           .warning__heading::before {
             display: table;
-            content: '';
-            background: url('../images/caution-sign.png') no-repeat;
+            content: "";
+            background: url("../images/caution-sign.png") no-repeat;
             background-size: 280px;
             position: absolute;
             z-index: 0;
@@ -432,7 +432,7 @@
         max-width: 100%;
         min-height: 470px;
         border-radius: 5px;
-        background: url('../images/slide-1.png');
+        background: url("../images/slide-1.png");
         background-repeat: no-repeat;
         background-position: center right;
         background-size: cover;
@@ -552,13 +552,17 @@
         }
       }
 
+      .button-load-more {
+        display: none;
+      }
+
       h3 {
         color: #fff;
         position: relative;
         &::after,
         &::before {
           display: table;
-          content: '';
+          content: "";
           width: 20%;
           height: 2px;
           background-color: rgba(#fff, 0.3);
