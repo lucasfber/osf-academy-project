@@ -458,6 +458,32 @@
       background-color: $bg-dark;
       text-align: center;
       padding: 55px 0;
+
+      h3 {
+        font-size: 24px;
+        color: #fff;
+        position: relative;
+        margin-bottom: 42px;
+
+        &::after,
+        &::before {
+          display: table;
+          content: "";
+          width: 456px;
+          height: 2px;
+          background-color: rgba(#fff, 0.3);
+          position: absolute;
+          top: 50%;
+        }
+
+        &::before {
+          left: 14px;
+        }
+
+        &::after {
+          right: 14px;
+        }
+      }
       //PRODUCT TILE
       .products-grid {
         max-width: 1280px;
