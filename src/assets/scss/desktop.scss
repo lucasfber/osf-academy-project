@@ -340,6 +340,7 @@
   main {
     margin-top: 82px;
     padding-top: 40px;
+    background-color: $main-background;
 
     // 404
     .container {
@@ -447,6 +448,140 @@
                 right: 18px;
               }
             }
+          }
+        }
+      }
+    }
+
+    .primary-banner {
+      max-width: 100%;
+      background-color: #fff;
+      padding: 26px 0;
+
+      .container {
+        display: flex;
+      }
+
+      .align-0 {
+        text-align: left;
+      }
+
+      .align-1 {
+        text-align: center;
+      }
+
+      .align-2 {
+        text-align: right;
+      }
+
+      .carousel {
+        background: url("../images/slide-1.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        width: 865px;
+        height: 600px;
+        padding: 60px;
+        border-radius: 6px;
+        color: #fff;
+
+        h1 {
+          font-size: 48px;
+        }
+
+        p {
+          font-size: 14px;
+          margin-top: 116px;
+        }
+
+        > a {
+          border: 3px solid rgba(255, 255, 255, 0.6);
+          padding: 12px 32px;
+          color: #fff;
+          margin: 0 auto;
+          border-radius: 30px;
+          display: inline-block;
+          margin: 62px auto 0 auto;
+        }
+
+        /* .button-view-more-box {
+          max-width: 100%;
+          margin: 62px auto 0 auto;
+        } */
+
+        .carousel__controls {
+          text-align: center;
+          margin-top: 100px;
+
+          .carousel__controls-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 5px;
+
+            &:active {
+              &:active {
+                position: relative;
+                top: 3px;
+                width: 18px;
+                height: 18px;
+                border: 3px solid $bg-dark;
+                background-color: transparent;
+              }
+            }
+          }
+          .active {
+            position: relative;
+            top: 3px;
+            border: 3px solid #fff;
+            width: 18px;
+            height: 18px;
+            background-color: transparent;
+
+            &:active {
+              position: relative;
+              top: 3px;
+              width: 18px;
+              height: 18px;
+              border: 3px solid $bg-dark;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+
+      .summer-sales-box {
+        /* background-color: purple; */
+        margin-left: 30px;
+
+        .summer-sale {
+          background-color: $light-green;
+          border-radius: 6px;
+          color: #fff;
+          padding: 70px 36px;
+          text-align: center;
+          position: relative;
+          h1 {
+            font-size: 100px;
+          }
+          h2 {
+            font-size: 24px;
+            font-weight: 400;
+            position: relative;
+            z-index: 2;
+          }
+
+          &::after {
+            content: "";
+            display: table;
+            background: url("../images/palm-tree.png") no-repeat;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 130px;
+            height: 130px;
           }
         }
       }

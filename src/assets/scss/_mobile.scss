@@ -448,19 +448,14 @@
           color: #fff;
         }
 
-        .button-box {
-          max-width: 100%;
+        a {
+          border: 3px solid rgba(255, 255, 255, 0.6);
+          padding: 12px 32px;
+          color: #fff;
+          display: inline-block;
+          margin: 0 auto;
+          border-radius: 30px;
           margin: 62px auto 0 auto;
-          text-align: center;
-
-          a {
-            border: 3px solid rgba(255, 255, 255, 0.6);
-            padding: 12px 32px;
-            color: #fff;
-            display: inline-block;
-            margin: 0 auto;
-            border-radius: 30px;
-          }
         }
 
         .carousel__controls {
@@ -481,7 +476,7 @@
                 top: 3px;
                 width: 16px;
                 height: 16px;
-                border: 3px solid $light-green;
+                border: 3px solid $bg-dark;
                 background-color: transparent;
               }
             }
@@ -499,7 +494,7 @@
               top: 3px;
               width: 16px;
               height: 16px;
-              border: 3px solid $light-green;
+              border: 3px solid $bg-dark;
               background-color: transparent;
             }
           }
