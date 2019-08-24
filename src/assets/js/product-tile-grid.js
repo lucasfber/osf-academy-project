@@ -1,5 +1,5 @@
 import $ from "../../../node_modules/jquery/dist/jquery.min";
-
+import { addToShoppingBag, addToWishlist } from "./action-bar";
 const $buttonLoadMore = $("#button-load-more");
 const $productTileGrid = $(".products-grid");
 
@@ -91,6 +91,8 @@ function createDefaultProductTile(product) {
   productTile.append(productTileInfo);
   productTile.append(overlay);
 
+  buttonPlus.click(addToShoppingBag);
+  buttonHeart.click(addToWishlist);
   return productTile;
 }
 
@@ -129,11 +131,8 @@ function createNoOverlayProductTile(product) {
 
   priceLink.attr("href", "product-detailed-page.html");
   priceLink.addClass("price");
-  buttonBuyNowLink.attr("href", "#");
   buttonBuyNowLink.addClass("btn-buy");
-  buttonBuyNowLink.click(function(e) {
-    e.preventDefault();
-  });
+  buttonBuyNowLink.click(addToShoppingBag);
 
   productTileImage.append(productImageLink);
 

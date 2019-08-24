@@ -1,10 +1,10 @@
-import $ from '../../../node_modules/jquery/dist/jquery.slim';
+import $ from "../../../node_modules/jquery/dist/jquery.slim";
 
-const badgeWishlist = $('#badge-wishlist');
-const badgeBag = $('#badge-bag');
-const buttonPlus = $('#btn-plus');
-const buttonHeart = $('#btn-heart');
-const buttonBuyNow = $('.btn-buy');
+const badgeWishlist = $("#badge-wishlist");
+const badgeBag = $("#badge-bag");
+const buttonPlus = $("#btn-plus");
+const buttonHeart = $("#btn-heart");
+const buttonBuyNow = $(".btn-buy");
 
 let countWishlistItems = parseInt(badgeWishlist.text());
 let countBagItems = parseInt(badgeBag.text());
@@ -18,7 +18,7 @@ buttonBuyNow.click(addToShoppingBag);
 /**
  * Increases the number of the Wishlist's badge by 1.
  */
-function addToWishlist() {
+export function addToWishlist() {
   countWishlistItems = countWishlistItems + 1;
   badgeWishlist.text(countWishlistItems);
 }
