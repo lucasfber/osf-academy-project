@@ -16,30 +16,37 @@ $buttonLoadMore.click(function() {
 });
 
 /**
- * Make AJAX request to server and get the product data.
+ * Make AJAX request to server and get the product data (A JSON Array).
  *
  */
 function getData() {
   $.get(URI, function(data, status) {
-    //shuffle(data);
-    //createGridRow(data.slice(0, 4));
-    $productTileGrid.append(createStaticProductTile(data[0]));
+    shuffle(data);
+    console.log(data);
+    createGridRow(data.slice(0, 4));
   });
 }
 
 /**
- * Creates and styles the markup for a product tile
- * @param {object} product - an literal object representating a product
- * @returns the product tile's markup
+ * Based on product.type value, returns the correct Product Tile markup to be append on the DOM
+ * @param {object} product - an object literal representing a product
+ * @returns A Node element represeting a Product Tile based on product.type property.
  */
 function createProductTile(product) {
   if (product.type === 1) {
     return createDefaultProductTile(product);
   } else if (product.type === 2) {
-    return createProductTileWithoutOverlay(product);
-  }
+    return createNoOverlayProductTile(product);
+  } else return createStaticProductTile(product);
 }
 
+/**
+ * Creates a product tile type 1.
+ * This is the default type. It consists of a image, name, price and a
+ * gradient overlay with two buttons.
+ * @param product - An object literal representing a product.
+ * @returns A node element to be append on the DOM
+ */
 function createDefaultProductTile(product) {
   let productTile = $("<div></div>");
 
@@ -87,6 +94,13 @@ function createDefaultProductTile(product) {
   return productTile;
 }
 
+/**
+ * Creates a product tile type 2.
+ * With this type, the product tile has links on its image, price and name
+ * And also has button BUY NOW who increases the shopping bag's badge number
+ * @param product - An object literal representing a product.
+ * @returns A node element to be append on the DOM
+ */
 function createNoOverlayProductTile(product) {
   let productTile = $("<div></div>");
 
@@ -144,6 +158,12 @@ function createNoOverlayProductTile(product) {
   return productTile;
 }
 
+/**
+ * Creates a product tile type 3.
+ * It consists of a image + text and gradient as overlay
+ * @param product - An object literal representing a product.
+ * @returns A node element to be append on the DOM
+ */
 function createStaticProductTile(product) {
   let productTile = $("<div></div>");
   let productStaticImage = $(`<img src=${product.imageUrl} />`);
@@ -185,6 +205,11 @@ function createStaticProductTile(product) {
   return productTile;
 }
 
+/**
+ * Creates a number of product tiles based on array length passed as parameter
+ * and append them on the DOM.
+ * @param {*} products - The data (JSON array) who came from server.
+ */
 function createGridRow(products) {
   products.forEach(product => {
     const productTile = createProductTile(product);
@@ -192,6 +217,10 @@ function createGridRow(products) {
   });
 }
 
+/**
+ * It shuffles the array passed as parameter
+ * @param {*} array - An array of items
+ */
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
