@@ -4,6 +4,7 @@ import "./assets/js/carousel";
 import "./assets/js/carousel-products";
 import "./assets/js/action-bar";
 import "./assets/js/product-tile-grid";
+import "./assets/js/feature-products-slider";
 
 $(document).ready(function() {
   const dropdown = $(".navbar ul li");

@@ -741,8 +741,58 @@
       }
     }
 
-    .feature-products {
+    .osf-banner {
+      background: url("../images/banner-osf.png") no-repeat center center /
+        cover;
+      max-width: 100%;
+      min-height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 16px;
+      h2 {
+        font-size: 30px;
+        margin: 40px 0 30px 0;
+      }
+      p {
+        font-size: 14px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .featured-products {
       display: none;
+    }
+
+    .benefits-box {
+      background-color: #45413e;
+      color: #fff;
+      padding: 30px 18px 30px 18px;
+      .container {
+        margin: 0;
+      }
+      .benefit {
+        display: flex;
+        margin-bottom: 48px;
+
+        .benefit__image {
+          margin-right: 48px;
+          padding: 0 0 0 22px;
+        }
+
+        .benefit__text {
+          h4 {
+            font-size: 18px;
+            margin-bottom: 22px;
+          }
+          p {
+            color: #868380;
+            font-size: 14px;
+          }
+        }
+      }
     }
   }
 }
