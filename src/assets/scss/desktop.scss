@@ -689,6 +689,11 @@
           border-radius: 30px;
           display: inline-block;
           margin: 62px auto 0 auto;
+
+          &:hover {
+            background-color: $light-green;
+            color: #222;
+          }
         }
 
         /* .button-view-more-box {
@@ -1017,6 +1022,12 @@
             font-size: 15px;
           }
         }
+
+        &:hover {
+          background-color: $light-green;
+          color: #222;
+          border-color: $light-green;
+        }
       }
     }
 
@@ -1149,6 +1160,7 @@
               color: $blue;
               font-weight: 400;
               display: inline-block;
+              padding: 0;
             }
 
             .price-box {
@@ -1557,6 +1569,10 @@
       li {
         display: inline-block;
         color: #b2b2b2;
+
+        &:hover {
+          color: #888;
+        }
       }
     }
   }

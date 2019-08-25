@@ -44,7 +44,7 @@ $(document).ready(function() {
   });
 
   navbarLink.click(function(e) {
-    e.preventDefault();
+    //e.preventDefault();
     $(this)
       .parent()
       .children(".menu")

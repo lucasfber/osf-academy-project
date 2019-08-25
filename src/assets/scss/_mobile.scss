@@ -306,7 +306,6 @@
     margin-top: 83px;
 
     .container {
-      padding: 0 15px;
       .not-found-content {
         text-align: center;
         background-color: $main-background;
@@ -873,7 +872,7 @@
     margin-bottom: 30px;
 
     &:hover {
-      background-color: #79ac21;
+      color: #222;
     }
   }
 
@@ -985,6 +984,10 @@
 
   /* CATEGORY LANDING PAGE */
   .services {
+    .container {
+      padding: 0 15px;
+    }
+
     background-color: $main-background;
     max-width: 100%;
     padding: 22px 0;
