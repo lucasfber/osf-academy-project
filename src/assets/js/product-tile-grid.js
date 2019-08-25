@@ -32,7 +32,7 @@ function getData() {
  * @param {object} product - an object literal representing a product
  * @returns A Node element represeting a Product Tile based on product.type property.
  */
-function createProductTile(product) {
+export function createProductTile(product) {
   if (product.type === 1) {
     return createDefaultProductTile(product);
   } else if (product.type === 2) {
@@ -220,6 +220,6 @@ function createGridRow(products) {
  * It shuffles the array passed as parameter
  * @param {*} array - An array of items
  */
-function shuffle(array) {
+export function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
