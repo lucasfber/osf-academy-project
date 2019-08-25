@@ -1,11 +1,11 @@
-@import './base';
+@import "./base";
 
 $light-gray: rgba(255, 255, 255, 0.5);
 $lighter-gray: rgba(0, 0, 0, 0.5);
 $bg-dark: #262a32;
 $bg-dark-2: #252931;
 $blue: #011847;
-$light-green: #84bc22;
+$light-green: #83bb21;
 $layer-green: #35ca7e;
 $layer-heart-red: #e73c68;
 $main-background: #f0ecea;
@@ -14,7 +14,7 @@ $gray-color-font: #45413e;
 $border-radius-img: 6px;
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 span.icon {
@@ -32,8 +32,8 @@ span.icon {
   cursor: pointer;
 }
 
-.icon [class^='flaticon-']::before,
-.icon [class^='flaticon-']::after {
+.icon [class^="flaticon-"]::before,
+.icon [class^="flaticon-"]::after {
   font-size: 20px;
   margin: 0;
 }
@@ -89,7 +89,7 @@ i.icon-light::after {
 .main-header::before,
 .main-header::after {
   display: table;
-  content: '';
+  content: "";
   width: 35%;
   height: 2px;
   background-color: rgba(0, 0, 0, 0.1);
@@ -113,6 +113,6 @@ i.icon-light::after {
   color: #84bc22;
 }
 
-@import './mobile';
-@import './tablets.scss';
-@import './desktop.scss';
+@import "./mobile";
+@import "./tablets.scss";
+@import "./desktop.scss";
