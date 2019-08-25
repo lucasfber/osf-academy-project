@@ -306,9 +306,7 @@
     margin-top: 83px;
 
     .container {
-      /* max-width: 900px;
-      margin: 0 5%; */
-
+      padding: 0 15px;
       .not-found-content {
         text-align: center;
         background-color: $main-background;
@@ -1196,6 +1194,10 @@
           }
         }
       }
+    }
+
+    .product-tile-grid {
+      display: none;
     }
   }
 }
