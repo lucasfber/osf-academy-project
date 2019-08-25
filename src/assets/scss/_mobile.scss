@@ -304,14 +304,15 @@
   // MAIN
   main {
     margin-top: 83px;
-    padding-bottom: 30px;
 
     .container {
-      max-width: 900px;
-      margin: 0 5%;
+      /* max-width: 900px;
+      margin: 0 5%; */
 
-      .content {
+      .not-found-content {
         text-align: center;
+        background-color: $main-background;
+        padding: 26px 15px;
 
         .breadcrumb {
           margin: 28px 0;
