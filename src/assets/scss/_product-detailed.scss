@@ -11,6 +11,9 @@
     h1 {
       font-size: 31px;
       color: #45413e;
+      span {
+        display: none;
+      }
     }
 
     .product-detailed-wrapper {
@@ -181,8 +184,8 @@
             outline: none;
           }
 
-          input[type="number"]::-webkit-inner-spin-button,
-          input[type="number"]::-webkit-outer-spin-button {
+          input[type='number']::-webkit-inner-spin-button,
+          input[type='number']::-webkit-outer-spin-button {
             @include vp-appearance(none);
             margin: 0;
           }
@@ -232,6 +235,14 @@
       }
     }
   }
+}
+
+/* 
+  PRODUCT INFO TABS HERE OR IN DESKTOP ?
+*/
+.product-info-tabs {
+  max-width: 120px;
+  background-color: red;
 }
 
 main {
