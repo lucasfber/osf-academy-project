@@ -1,3 +1,9 @@
+@media screen and (min-width: 319px) and (max-width: 767px) {
+  .product-info-tabs {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 1280px) {
   .popular-items {
     background-color: $bg-dark;
