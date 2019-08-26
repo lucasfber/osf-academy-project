@@ -3,6 +3,17 @@ import $ from '../../../node_modules/jquery/dist/jquery.slim';
 const $buttonScroll = $('.button-scroll');
 const $productDescriptionWrapper = $('.product-detail__description p');
 const $buttonReadMore = $('.button-read-more');
+const $modalFullImage = $('.modal-full-image');
+const $buttonZoom = $('.button-zoom');
+const $buttonCloseModal = $('.modal-close');
+
+$buttonCloseModal.click(function() {
+  $modalFullImage.hide();
+});
+
+$buttonZoom.click(function() {
+  $modalFullImage.css('display', 'flex');
+});
 
 const characterCount = $productDescriptionWrapper.text().length;
 const fullTextDescription = $productDescriptionWrapper.text();

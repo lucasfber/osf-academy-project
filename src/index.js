@@ -98,6 +98,8 @@ $(document).ready(function() {
     });
   }
 
+  function disposeModal() {}
+
   btnMenu.click(toggleMenu);
 
   btnClose.click(toggleMenu);
