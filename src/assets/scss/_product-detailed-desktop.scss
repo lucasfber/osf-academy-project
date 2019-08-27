@@ -214,6 +214,7 @@
       font-size: 24px;
       font-weight: bold;
       color: #bdc3c7;
+      outline: none;
     }
     .tab--active {
       background-color: #262a33;
@@ -226,7 +227,7 @@
   .tab-info {
     background-color: #262b33;
     padding: 68px;
-    display: flex;
+    display: none;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
 
@@ -240,5 +241,8 @@
         margin-bottom: 20px;
       }
     }
+  }
+  .tab-info--active {
+    display: flex;
   }
 }
