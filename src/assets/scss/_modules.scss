@@ -230,6 +230,7 @@
 
     .product-tile__info {
       max-width: 370px;
+      height: 114px;
       background-color: #fff;
       text-align: center;
       padding: 0 22px 22px 22px;
@@ -256,23 +257,68 @@
         span {
           a {
             border: 2px solid #ededed;
-            padding: 12px 19px;
+            padding: 8px 19px;
           }
 
           .price {
             margin-right: -2px;
             border-bottom-left-radius: 25px;
             border-top-left-radius: 25px;
+            color: #24c36c;
           }
           .btn-buy {
-            border: 2px solid #ededed;
-            padding: 12px 19px;
             border-bottom-right-radius: 25px;
             border-top-right-radius: 25px;
           }
         }
       }
     }
+    // .product-tile__info {
+    //   max-width: 370px;
+    //   height: 114px;
+    //   background-color: #fff;
+    //   text-align: center;
+    //   padding: 0 22px 22px 22px;
+    //   border-bottom-left-radius: 5px;
+    //   border-bottom-right-radius: 5px;
+    //   margin: -3px auto 0 auto;
+
+    //   p {
+    //     font-size: 16px;
+    //     line-height: 18px;
+    //     color: $gray-color-font;
+    //     padding-top: 20px;
+    //   }
+
+    //   span {
+    //     font-size: 14px;
+    //     color: $blue;
+    //     font-weight: 400;
+    //     display: inline-block;
+    //     padding-top: 20px;
+    //   }
+
+    //   .price-box {
+    //     span {
+    //       a {
+    //         border: 2px solid #ededed;
+    //         padding: 12px 19px;
+    //       }
+
+    //       .price {
+    //         margin-right: -2px;
+    //         border-bottom-left-radius: 25px;
+    //         border-top-left-radius: 25px;
+    //       }
+    //       .btn-buy {
+    //         border: 2px solid #ededed;
+    //         padding: 12px 19px;
+    //         border-bottom-right-radius: 25px;
+    //         border-top-right-radius: 25px;
+    //       }
+    //     }
+    //   }
+    // }
 
     .overlay {
       position: absolute;
@@ -430,6 +476,10 @@
   .popular-items {
     .button-load-more {
       display: none;
+    }
+
+    .price-box {
+      margin-top: 10px;
     }
 
     .button-scroll {
