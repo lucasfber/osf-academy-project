@@ -269,4 +269,19 @@
       }
     }
   }
+
+  .full-image-wrapper {
+    span {
+      &.modal-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        &::before {
+          color: #222;
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
