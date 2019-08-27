@@ -46,11 +46,13 @@
           border: 1px solid #a2a09e;
           border-radius: 2px;
           margin-bottom: 20px;
+          opacity: 0.6;
           cursor: pointer;
         }
 
         .choosed {
           border: 1px solid $light-green;
+          opacity: 1;
         }
       }
     }
@@ -138,8 +140,8 @@
           outline: none;
         }
 
-        input[type='number']::-webkit-inner-spin-button,
-        input[type='number']::-webkit-outer-spin-button {
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
           @include vp-appearance(none);
           margin: 0;
         }
