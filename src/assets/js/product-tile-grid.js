@@ -207,7 +207,7 @@ function createStaticProductTile(product) {
  * and append them on the DOM.
  * @param {*} products - The data (JSON array) who came from server.
  */
-function createGridRow(products) {
+export function createGridRow(products) {
   products.forEach(product => {
     const productTile = createProductTile(product);
     $productTileGrid.append(productTile);

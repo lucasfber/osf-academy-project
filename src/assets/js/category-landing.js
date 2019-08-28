@@ -1,24 +1,25 @@
-import $ from "../../../node_modules/jquery/dist/jquery.min";
-import { addToShoppingBag, addToWishlist } from "./action-bar";
-import { shuffle, createProductTile } from "./product-tile-grid";
+import $ from '../../../node_modules/jquery/dist/jquery.min';
+import { addToShoppingBag, addToWishlist } from './action-bar';
+import { shuffle, createProductTile } from './product-tile-grid';
 /**
  * @constant
  * @type {string}
  * An URI to a simple server which give us the json for products.
  */
 const URI =
-  "https://my-json-server.typicode.com/lucasfber/osf-database/products";
-const $buttonHideFilter = $(".filters-container > span");
-const $buttonLoadMore = $(".products-tile-wrapper > button");
-const $filters = $(".filter-box");
+  'https://my-json-server.typicode.com/lucasfber/osf-database/products';
+const $buttonHideFilter = $('.filters-container > span');
+const $buttonLoadMoreWrapper = $('.products-tile-wrapper > button');
+const $buttonLoadMoreGrid = $('.product-tile-grid > button');
+const $filters = $('.filter-box');
 let isVisible = true;
-let buttonText = "";
+let buttonText = '';
 
 /**
  * Function to toggle the filter section and changes the button text to "Hide Filter" or "Show Filter"
  */
 function toggleFilter() {
-  buttonText = isVisible ? "Show Filter" : "Hide Filter";
+  buttonText = isVisible ? 'Show Filter' : 'Hide Filter';
   $buttonHideFilter.text(buttonText);
   $filters.toggle();
   isVisible = !isVisible;
@@ -28,22 +29,41 @@ function toggleFilter() {
  * Make a AJAX request to URI, get the data, shuffles it, and append to the DOM
  */
 function loadMore() {
+  const clientWidth = getClientWidth();
+
   $.get(URI, function(data) {
     let filteredData = filterData(data);
+    let slicedData;
 
     shuffle(filteredData);
-
-    const productTile = createProductTile(filteredData[0]);
-    appendToDOM(productTile);
+    console.log(clientWidth);
+    if (clientWidth < 1280) {
+      slicedData = filteredData.slice(0, 2);
+      createProductTileRow(slicedData, $buttonLoadMoreWrapper);
+    } else {
+      slicedData = filteredData.slice(0, 4);
+      createProductTileRow(slicedData, $buttonLoadMoreGrid);
+    }
   });
 }
+
+const createProductTileRow = (slicedData, $insertBefore) => {
+  slicedData.forEach(data => {
+    const productTile = createProductTile(data);
+    appendToDOM(productTile, $insertBefore);
+  });
+};
+
+const getClientWidth = () => {
+  return $(window).width();
+};
 
 /**
  * Append the productNode param on the DOM, before Load More button
  * @param {object} productNode - a Product Tile markup
  */
-function appendToDOM(productNode) {
-  $buttonLoadMore.before(productNode);
+function appendToDOM(productNode, $insertBefore) {
+  $insertBefore.before(productNode);
 }
 
 /**
@@ -61,6 +81,11 @@ $buttonHideFilter.click(function() {
   toggleFilter();
 });
 
-$buttonLoadMore.click(function() {
+$buttonLoadMoreWrapper.click(function() {
+  loadMore();
+});
+
+$buttonLoadMoreGrid.click(function() {
+  console.log('chamou?');
   loadMore();
 });
