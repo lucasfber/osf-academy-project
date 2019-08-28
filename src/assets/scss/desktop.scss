@@ -26,13 +26,13 @@
           }
 
           .logo__brand-box {
-            h1 {
+            h2 {
               font-size: 32px;
               letter-spacing: 5px;
               color: $blue;
             }
 
-            h2 {
+            h3 {
               margin-top: -7px;
               font-size: 18px;
               color: $light-green;
@@ -146,7 +146,7 @@
 
                 &::after {
                   display: table;
-                  content: '';
+                  content: "";
                   width: 70%;
                   height: 1px;
                   background-color: #ddd;
@@ -589,7 +589,7 @@
         .main-header::before,
         .main-header::after {
           display: table;
-          content: '';
+          content: "";
           width: 44%;
           height: 2px;
           background-color: rgba(0, 0, 0, 0.1);
@@ -613,8 +613,8 @@
             z-index: 0;
 
             &::after {
-              content: '';
-              background: url('../images/caution-sign.png') no-repeat;
+              content: "";
+              background: url("../images/caution-sign.png") no-repeat;
               background-size: 360px;
               position: absolute;
               top: 0;
@@ -706,7 +706,7 @@
       }
 
       .carousel {
-        background: url('../images/slide-1.png');
+        background: url("../images/slide-1.png");
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -800,10 +800,11 @@
           padding: 70px 36px;
           text-align: center;
           position: relative;
-          h1 {
+
+          h2 {
             font-size: 100px;
           }
-          h2 {
+          h3 {
             font-size: 24px;
             font-weight: 400;
             margin-top: 42px;
@@ -812,9 +813,9 @@
           }
 
           &::after {
-            content: '';
+            content: "";
             display: table;
-            background: url('../images/palm-tree.png') no-repeat;
+            background: url("../images/palm-tree.png") no-repeat;
             position: absolute;
             bottom: 0;
             left: 0;
@@ -1076,7 +1077,7 @@
     // }
 
     .osf-banner {
-      background: url('../images/banner-osf.png') no-repeat center center /
+      background: url("../images/banner-osf.png") no-repeat center center /
         cover;
       max-width: 1600px;
       min-height: 600px;
@@ -1130,7 +1131,7 @@
           margin-right: 260px;
           &::after {
             display: table;
-            content: '';
+            content: "";
             width: 236px;
             height: 2px;
             background-color: #fff;
@@ -1146,7 +1147,7 @@
           margin-left: 260px;
           &::after {
             display: table;
-            content: '';
+            content: "";
             width: 236px;
             height: 2px;
             background-color: #fff;
@@ -1333,7 +1334,7 @@
 
         &::after,
         &::before {
-          content: '';
+          content: "";
           display: table;
           width: 396px;
           height: 2px;
@@ -1551,7 +1552,7 @@
     }
   }
 
-  @import 'product-detailed-desktop';
+  @import "product-detailed-desktop";
 
   footer {
     padding: 40px 55px;
