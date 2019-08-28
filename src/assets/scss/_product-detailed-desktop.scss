@@ -74,7 +74,7 @@
 
       .select-box {
         position: relative;
-        width: 156px;
+        width: 160px;
         margin-top: 28px;
         .color-choosed {
           width: 22px;
@@ -146,8 +146,8 @@
           outline: none;
         }
 
-        input[type='number']::-webkit-inner-spin-button,
-        input[type='number']::-webkit-outer-spin-button {
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
           @include vp-appearance(none);
           margin: 0;
         }

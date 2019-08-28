@@ -523,50 +523,6 @@
     background-color: #fff;
   }
 
-  // .product-info-tabs {
-  //   max-width: 1200px;
-  //   background-color: #fff;
-  //   border-bottom-left-radius: 6px;
-  //   border-bottom-right-radius: 6px;
-
-  //   margin-bottom: 10px;
-  //   .tabs {
-  //     width: 100%;
-  //     text-align: center;
-  //     .tab {
-  //       padding: 24px 50px 27px 50px;
-  //       font-size: 24px;
-  //       font-weight: bold;
-  //       color: #bdc3c7;
-  //     }
-  //     .tab--active {
-  //       background-color: #262a33;
-  //       border-top-left-radius: 20px;
-  //       border-top-right-radius: 20px;
-  //       color: #fff;
-  //     }
-  //   }
-
-  //   .tab-info {
-  //     background-color: #262b33;
-  //     padding: 68px;
-  //     display: flex;
-  //     border-bottom-left-radius: 6px;
-  //     border-bottom-right-radius: 6px;
-
-  //     .tab-info__text {
-  //       color: #fff;
-  //       font-size: 16px;
-  //       line-height: 24px;
-  //       padding: 10px;
-  //       max-width: 50%;
-  //       p {
-  //         margin-bottom: 20px;
-  //       }
-  //     }
-  //   }
-  // }
-
   main {
     margin-top: 82px;
     /* padding-top: 40px; */
@@ -739,11 +695,6 @@
             color: #222;
           }
         }
-
-        /* .button-view-more-box {
-          max-width: 100%;
-          margin: 62px auto 0 auto;
-        } */
 
         .carousel__controls {
           text-align: center;
@@ -1553,74 +1504,4 @@
   }
 
   @import "product-detailed-desktop";
-
-  footer {
-    padding: 40px 55px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
-    color: #333;
-    .contact,
-    .categories,
-    .about {
-      h4 {
-        font-weight: bold;
-        span {
-          display: none;
-        }
-      }
-
-      .wrapper {
-        display: block !important;
-        color: #45413e;
-        p {
-          margin-bottom: 24px;
-        }
-      }
-    }
-
-    .contact-info {
-      margin-right: 60px;
-
-      .contact {
-        margin-top: 36px;
-
-        h4 {
-          margin-bottom: 16px;
-        }
-      }
-    }
-
-    .categories,
-    .about {
-      h4 {
-        margin-bottom: 30px;
-      }
-      li {
-        margin-bottom: 20px;
-      }
-    }
-
-    .categories {
-      width: 50%;
-      .wrapper {
-        display: flex !important;
-
-        .link-box {
-          width: 33.3%;
-        }
-      }
-    }
-
-    .social {
-      li {
-        display: inline-block;
-        color: #b2b2b2;
-
-        &:hover {
-          color: #888;
-        }
-      }
-    }
-  }
 }

@@ -13,6 +13,12 @@ const $productImage = $(".product-detailed__image > img");
 const $productThumbnail = $(".thumbnails-box img");
 const $lastSliderDot = $(".slider-dot:nth-child(4)");
 const $sliderDots = $(".slider-dot");
+const $colorChoosed = $(".color-choosed");
+const $selectColor = $(".select-color");
+
+$selectColor.click(function() {
+  changeSelectColor($(this));
+});
 
 let currentImageSrc;
 
@@ -22,6 +28,11 @@ $sliderDots.click(function() {
 
   setCurrentDotActive($(this));
 });
+
+const changeSelectColor = selectInput => {
+  const optionValue = selectInput.val();
+  $colorChoosed.css("background-color", optionValue);
+};
 
 function setCurrentDotActive($dot) {
   $sliderDots.removeClass("active");
