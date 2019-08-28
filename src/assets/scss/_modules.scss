@@ -220,7 +220,7 @@
     &::after,
     &::before {
       display: table;
-      content: '';
+      content: "";
       width: 22%;
       height: 2px;
       background-color: rgba(#fff, 0.3);
@@ -426,6 +426,122 @@
   display: inline-block;
 }
 
+.summer-sales-box {
+  /* background-color: purple; */
+  margin-left: 30px;
+  display: none;
+  .summer-sale {
+    background-color: $light-green;
+    height: 400px;
+    border-radius: 6px;
+    color: #fff;
+    padding: 70px 36px;
+    text-align: center;
+    position: relative;
+
+    h2 {
+      font-size: 100px;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-top: 42px;
+      position: relative;
+      z-index: 2;
+    }
+
+    &::after {
+      content: "";
+      display: table;
+      background: url("../images/palm-tree.png") no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  .social-box {
+    text-align: center;
+    color: #45413e;
+    margin: 20px 0;
+    padding: 40px 16px 0 16px;
+
+    h3 {
+      font-weight: 400;
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    p {
+      font-size: 13px;
+      margin-bottom: 30px;
+    }
+
+    .btn-facebook {
+      margin-top: 30px;
+
+      a {
+        font-size: 14px;
+        color: #395b95;
+        border: 2px solid #395b95;
+        padding: 10px 38px 10px 23px;
+        border-radius: 25px;
+        display: inline-block;
+        i {
+          &::before {
+            font-size: 15px;
+            margin: 0;
+            margin-right: 10px;
+          }
+        }
+
+        &:hover {
+          background-color: #395b95;
+          color: #fff;
+          border: 2px solid #fff;
+        }
+      }
+    }
+  }
+}
+
+.benefits-box {
+  background-color: #45413e;
+  color: #fff;
+  padding: 30px 18px 30px 18px;
+
+  .container {
+    margin: 0;
+  }
+
+  .benefit {
+    display: flex;
+    margin-bottom: 48px;
+
+    &:nth-child(3) {
+      display: none;
+    }
+
+    .benefit__image {
+      margin-right: 48px;
+      padding: 0 0 0 22px;
+    }
+
+    .benefit__text {
+      h4 {
+        font-size: 18px;
+        margin-bottom: 22px;
+      }
+      p {
+        color: #868380;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 319px) and (max-width: 767px) {
   .button-load-more {
     color: #fff;
@@ -518,6 +634,16 @@
         }
       }
     }
+  }
+
+  main {
+    .primary-banner {
+      margin-bottom: 0;
+    }
+  }
+
+  .summer-sales-box {
+    display: none;
   }
 }
 
@@ -682,9 +808,16 @@
       margin: 25px 0;
     }
   }
+
+  .summer-sales-box {
+  }
 }
 
 @media screen and (min-width: 1280px) {
+  .summer-sales-box {
+    display: block;
+  }
+
   .popular-items {
     .button-load-more {
       display: inline-block;
@@ -700,6 +833,62 @@
       }
     }
   }
+
+  /* .benefits-box {
+    padding: 50px 0;
+    .container {
+      margin: 0 auto;
+      .benefit {
+        &:nth-child(3) {
+          display: flex;
+        }
+      }
+    }
+  } */
+
+  .benefits-box {
+    background-color: #45413e;
+    color: #fff;
+    width: 100%;
+    padding: 50px 0;
+
+    .container {
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+
+    .benefit {
+      display: flex;
+      width: 399.58px;
+      margin: 0;
+
+      &:nth-child(3) {
+        display: flex;
+      }
+
+      .benefit__image {
+        margin-right: 48px;
+        padding: 0 0 0 22px;
+      }
+
+      .benefit__text {
+        h4 {
+          font-size: 18px;
+          margin-bottom: 22px;
+        }
+        p {
+          color: #868380;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .benefit-inverse {
+      display: none;
+    }
+  }
+
   .products-grid {
     max-width: 1280px;
 

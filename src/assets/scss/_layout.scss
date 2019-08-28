@@ -1,4 +1,4 @@
-@import '../../../node_modules/sass-autoprefixer/scss/prefixes.scss';
+@import "../../../node_modules/sass-autoprefixer/scss/prefixes.scss";
 
 .services {
   .container {
@@ -18,7 +18,7 @@
 
     &::after,
     &::before {
-      content: '';
+      content: "";
       display: table;
       width: 25%;
       height: 2px;
@@ -351,8 +351,8 @@
       outline: none;
     }
 
-    input[type='number']::-webkit-inner-spin-button,
-    input[type='number']::-webkit-outer-spin-button {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
       @include vp-appearance(none);
       margin: 0;
     }
@@ -434,8 +434,8 @@ main {
 
         .warning__heading::before {
           display: table;
-          content: '';
-          background: url('../images/caution-sign.png') no-repeat;
+          content: "";
+          background: url("../images/caution-sign.png") no-repeat;
           background-size: 280px;
           position: absolute;
           z-index: 0;
@@ -513,14 +513,12 @@ main {
   }
 
   .primary-banner {
-    margin-bottom: 22px;
-
     .carousel {
       padding: 32px 16px 16px 16px;
       max-width: 100%;
       min-height: 470px;
       border-radius: 5px;
-      background: url('../images/slide-1.png');
+      background: url("../images/slide-1.png");
       background-repeat: no-repeat;
       background-position: center right;
       background-size: cover;
@@ -589,13 +587,13 @@ main {
       }
     }
 
-    .summer-sales-box {
+    /* .summer-sales-box {
       display: none;
-    }
+    } */
   }
 
   .osf-banner {
-    background: url('../images/banner-osf.png') no-repeat center center / cover;
+    background: url("../images/banner-osf.png") no-repeat center center / cover;
     max-width: 100%;
     min-height: 210px;
     display: flex;
@@ -616,39 +614,6 @@ main {
 
   .featured-products {
     display: none;
-  }
-
-  .benefits-box {
-    background-color: #45413e;
-    color: #fff;
-    padding: 30px 18px 30px 18px;
-    .container {
-      margin: 0;
-    }
-    .benefit {
-      display: flex;
-      margin-bottom: 48px;
-
-      &:nth-child(3) {
-        display: none;
-      }
-
-      .benefit__image {
-        margin-right: 48px;
-        padding: 0 0 0 22px;
-      }
-
-      .benefit__text {
-        h4 {
-          font-size: 18px;
-          margin-bottom: 22px;
-        }
-        p {
-          color: #868380;
-          font-size: 14px;
-        }
-      }
-    }
   }
 }
 
@@ -1105,8 +1070,8 @@ main {
               outline: none;
             }
 
-            input[type='number']::-webkit-inner-spin-button,
-            input[type='number']::-webkit-outer-spin-button {
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button {
               @include vp-appearance(none);
               margin: 0;
             }
@@ -2097,7 +2062,7 @@ main {
 
       &::after,
       &::before {
-        content: '';
+        content: "";
         display: table;
         width: 396px;
         height: 2px;
@@ -2466,8 +2431,8 @@ main {
             outline: none;
           }
 
-          input[type='number']::-webkit-inner-spin-button,
-          input[type='number']::-webkit-outer-spin-button {
+          input[type="number"]::-webkit-inner-spin-button,
+          input[type="number"]::-webkit-outer-spin-button {
             @include vp-appearance(none);
             margin: 0;
           }
