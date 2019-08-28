@@ -1,20 +1,47 @@
-import $ from "../../../node_modules/jquery/dist/jquery.slim";
+import $ from '../../../node_modules/jquery/dist/jquery.slim';
 
-import { disposeModalOnEscKeyPressed } from "./util";
+import { disposeModalOnEscKeyPressed } from './util';
 
-const $buttonScroll = $(".button-scroll");
-const $productDescriptionWrapper = $(".product-detail__description p");
-const $buttonReadMore = $(".button-read-more");
-const $modalFullImage = $(".modal-full-image");
-const $modalImage = $(".full-image-wrapper > img");
-const $buttonZoom = $(".button-zoom");
-const $buttonCloseModal = $(".modal-close");
-const $productImage = $(".product-detailed__image > img");
-const $productThumbnail = $(".thumbnails-box img");
-const $lastSliderDot = $(".slider-dot:nth-child(4)");
-const $sliderDots = $(".slider-dot");
-const $colorChoosed = $(".color-choosed");
-const $selectColor = $(".select-color");
+const $buttonScroll = $('.button-scroll');
+const $productDescriptionWrapper = $('.product-detail__description p');
+
+const $modalFullImage = $('.modal-full-image');
+const $modalImage = $('.full-image-wrapper > img');
+const $buttonZoom = $('.button-zoom');
+const $buttonCloseModal = $('.modal-close');
+const $buttonPlus = $('.plus');
+const $buttonMinus = $('.minus');
+const $buttonReadMore = $('.button-read-more');
+const $productImage = $('.product-detailed__image > img');
+const $productThumbnail = $('.thumbnails-box img');
+const $lastSliderDot = $('.slider-dot:nth-child(4)');
+const $sliderDots = $('.slider-dot');
+const $colorChoosed = $('.color-choosed');
+const $selectColor = $('.select-color');
+const $quantityInput = $('.product-detailed__quantity > input');
+
+$buttonPlus.click(function() {
+  increaseQuantity();
+});
+
+$buttonMinus.click(function() {
+  decreaseQuantity();
+});
+
+const increaseQuantity = () => {
+  let currentQuantity = parseInt($quantityInput.val());
+
+  currentQuantity = currentQuantity + 1;
+  $quantityInput.val(currentQuantity);
+};
+
+const decreaseQuantity = () => {
+  let currentQuantity = parseInt($quantityInput.val());
+  if (currentQuantity >= 2) {
+    currentQuantity = currentQuantity - 1;
+    $quantityInput.val(currentQuantity);
+  }
+};
 
 $selectColor.click(function() {
   changeSelectColor($(this));
@@ -31,12 +58,12 @@ $sliderDots.click(function() {
 
 const changeSelectColor = selectInput => {
   const optionValue = selectInput.val();
-  $colorChoosed.css("background-color", optionValue);
+  $colorChoosed.css('background-color', optionValue);
 };
 
 function setCurrentDotActive($dot) {
-  $sliderDots.removeClass("active");
-  $dot.addClass("slider-dot active");
+  $sliderDots.removeClass('active');
+  $dot.addClass('slider-dot active');
 }
 
 function moveSlider(dotIndex) {
@@ -52,11 +79,11 @@ function moveSlider(dotIndex) {
 }
 
 $productThumbnail.click(function(e) {
-  let currentThumbnailSrc = $(this).attr("src");
+  let currentThumbnailSrc = $(this).attr('src');
   $productThumbnail.removeClass();
-  $(this).addClass("choosed");
-  currentImageSrc = currentThumbnailSrc.replace("img/", "img/lg-");
-  $productImage.attr("src", currentImageSrc);
+  $(this).addClass('choosed');
+  currentImageSrc = currentThumbnailSrc.replace('img/', 'img/lg-');
+  $productImage.attr('src', currentImageSrc);
 });
 
 $buttonCloseModal.click(function() {
@@ -64,10 +91,10 @@ $buttonCloseModal.click(function() {
 });
 
 $buttonZoom.click(function() {
-  let productImageSrc = $productImage.attr("src");
-  $modalImage.attr("src", productImageSrc);
+  let productImageSrc = $productImage.attr('src');
+  $modalImage.attr('src', productImageSrc);
 
-  $modalFullImage.css("display", "flex");
+  $modalFullImage.css('display', 'flex');
 });
 
 const characterCount = $productDescriptionWrapper.text().length;
@@ -88,13 +115,13 @@ const hideText = () => {
         .text()
         .substr(0, 100)
     );
-    $buttonReadMore.text("Read more");
+    $buttonReadMore.text('Read more');
   }
 };
 
 const showText = () => {
   $productDescriptionWrapper.text(fullTextDescription);
-  $buttonReadMore.text("Show less");
+  $buttonReadMore.text('Show less');
 };
 
 const toggleDescription = () => {
