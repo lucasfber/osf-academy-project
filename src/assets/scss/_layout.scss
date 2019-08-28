@@ -246,6 +246,55 @@
       }
     }
   }
+
+  // footer
+  footer {
+    padding: 20px 16px 0 16px;
+    margin-bottom: 114px;
+    font-size: 13px;
+    color: #333;
+
+    .contact,
+    .categories,
+    .about {
+      h4 {
+        margin: 24px 0;
+        position: relative;
+        span {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+      }
+
+      .wrapper {
+        display: none;
+        color: #45413e;
+        p {
+          margin-bottom: 24px;
+          font-size: 13px;
+        }
+      }
+
+      .link-box {
+        li {
+          margin-bottom: 10px;
+          a {
+            padding: 10px 20px 0 0;
+          }
+        }
+      }
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 25px;
+      li {
+        display: inline-block;
+        color: #b2b2b2;
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1279px) {
@@ -543,8 +592,8 @@
 
           .warning__heading::before {
             display: table;
-            content: "";
-            background: url("../images/caution-sign.png") no-repeat;
+            content: '';
+            background: url('../images/caution-sign.png') no-repeat;
             background-size: 280px;
             position: absolute;
             z-index: 0;
@@ -630,7 +679,7 @@
         max-width: 100%;
         min-height: 470px;
         border-radius: 5px;
-        background: url("../images/slide-1.png");
+        background: url('../images/slide-1.png');
         background-repeat: no-repeat;
         background-position: center right;
         background-size: cover;
@@ -708,7 +757,7 @@
     }
 
     .osf-banner {
-      background: url("../images/banner-osf.png") no-repeat center center /
+      background: url('../images/banner-osf.png') no-repeat center center /
         cover;
       max-width: 100%;
       min-height: 210px;
@@ -773,6 +822,7 @@
     margin-bottom: 60px;
     background-color: #fff;
     color: #333;
+
     div {
       &:nth-child(1) {
         order: 1;
@@ -797,9 +847,9 @@
     }
 
     .contact-info {
-      width: 50vw;
-      height: 184px;
-
+      width: 384px;
+      height: 200px;
+      margin-right: 150px;
       .wrapper {
         margin-top: 10px;
         color: #45413e;
@@ -810,7 +860,7 @@
     }
 
     .social {
-      width: 44vw;
+      width: 192px;
       height: 164px;
       text-align: right;
       padding-top: 100px;
@@ -864,75 +914,74 @@
     }
   }
 }
-footer {
-  padding: 40px 55px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 13px;
-  color: #333;
-  .contact,
-  .categories,
-  .about {
-    h4 {
-      font-weight: bold;
-      span {
-        display: none;
-      }
-    }
-
-    .wrapper {
-      display: block !important;
-      color: #45413e;
-      p {
-        margin-bottom: 24px;
-      }
-    }
-  }
-
-  .contact-info {
-    margin-right: 60px;
-
-    .contact {
-      margin-top: 36px;
-
-      h4 {
-        margin-bottom: 16px;
-      }
-    }
-  }
-
-  .categories,
-  .about {
-    h4 {
-      margin-bottom: 30px;
-    }
-    li {
-      margin-bottom: 20px;
-    }
-  }
-
-  .categories {
-    width: 50%;
-    .wrapper {
-      display: flex !important;
-
-      .link-box {
-        width: 33.3%;
-      }
-    }
-  }
-
-  .social {
-    li {
-      display: inline-block;
-      color: #b2b2b2;
-
-      &:hover {
-        color: #888;
-      }
-    }
-  }
-}
 
 @media screen and (min-width: 1280px) {
+  footer {
+    padding: 40px 55px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #333;
+
+    .contact,
+    .categories,
+    .about {
+      h4 {
+        margin-bottom: 16px;
+        font-weight: bold;
+        span {
+          display: none;
+        }
+      }
+
+      .wrapper {
+        display: block !important;
+        color: #45413e;
+        p {
+          margin-bottom: 24px;
+        }
+      }
+    }
+
+    .contact-info {
+      margin-right: 60px;
+
+      .contact {
+        margin-top: 36px;
+
+        h4 {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    .categories,
+    .about {
+      li {
+        margin-bottom: 20px;
+      }
+    }
+
+    .categories {
+      width: 50%;
+      .wrapper {
+        display: flex !important;
+
+        .link-box {
+          width: 33.3%;
+        }
+      }
+    }
+
+    .social {
+      li {
+        display: inline-block;
+        color: #b2b2b2;
+
+        &:hover {
+          color: #888;
+        }
+      }
+    }
+  }
 }
