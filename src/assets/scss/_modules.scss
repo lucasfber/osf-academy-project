@@ -640,6 +640,8 @@
 
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
     .product-tile {
       margin: 20px auto;
