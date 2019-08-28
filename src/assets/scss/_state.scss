@@ -1,0 +1,56 @@
+.button-load-more--green {
+  background-color: $light-green;
+  border: none;
+  padding: 12px 28px;
+  display: inline-block;
+  margin-bottom: 30px;
+
+  &:hover {
+    color: #222;
+  }
+}
+
+.color--active {
+  border: 3px solid #45413e;
+}
+
+.color--lightblue {
+  background-color: #43bfcf;
+}
+
+.color--lightgreen {
+  background-color: #49af00;
+}
+
+.color--darkgray {
+  background-color: #3d3f2f;
+}
+
+.color--blue {
+  background-color: #315bbd;
+}
+
+.color--orange {
+  background-color: #eb6115;
+}
+
+.color--red {
+  background-color: #db031d;
+}
+
+.color--magnolia {
+  background-color: #efe9d7;
+}
+
+.color--white {
+  background-color: #fff;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+}
+
+@media screen and (min-width: 1280px) {
+}

@@ -199,7 +199,7 @@
     &::after,
     &::before {
       display: table;
-      content: "";
+      content: '';
       width: 22%;
       height: 2px;
       background-color: rgba(#fff, 0.3);
@@ -384,7 +384,45 @@
   }
 }
 
+.breadcrumb {
+  margin: 28px 0;
+  text-align: center;
+
+  .breadcrumb__separator {
+    margin: 0 14px;
+  }
+
+  .breadcrumb__active {
+    color: #84bc22;
+  }
+}
+
+.color {
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
+  margin: 0 3px;
+  display: inline-block;
+}
+
 @media screen and (min-width: 319px) and (max-width: 767px) {
+  .button-load-more {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 13px 92px;
+    border-radius: 32px;
+    display: inline-block;
+    margin-top: 49px;
+    font-size: 14px;
+    display: block;
+    outline: none;
+    i {
+      &::before {
+        font-size: 15px;
+      }
+    }
+  }
+
   .product-info-tabs {
     display: none;
   }
