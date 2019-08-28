@@ -543,8 +543,8 @@
 
           .warning__heading::before {
             display: table;
-            content: '';
-            background: url('../images/caution-sign.png') no-repeat;
+            content: "";
+            background: url("../images/caution-sign.png") no-repeat;
             background-size: 280px;
             position: absolute;
             z-index: 0;
@@ -630,7 +630,7 @@
         max-width: 100%;
         min-height: 470px;
         border-radius: 5px;
-        background: url('../images/slide-1.png');
+        background: url("../images/slide-1.png");
         background-repeat: no-repeat;
         background-position: center right;
         background-size: cover;
@@ -708,7 +708,7 @@
     }
 
     .osf-banner {
-      background: url('../images/banner-osf.png') no-repeat center center /
+      background: url("../images/banner-osf.png") no-repeat center center /
         cover;
       max-width: 100%;
       min-height: 210px;
@@ -761,6 +761,93 @@
             color: #868380;
             font-size: 14px;
           }
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    margin-bottom: 60px;
+    background-color: #fff;
+    div {
+      &:nth-child(1) {
+        order: 1;
+      }
+      &:nth-child(2) {
+        order: 3;
+      }
+      &:nth-child(3) {
+        order: 4;
+      }
+      &:nth-child(4) {
+        order: 2;
+      }
+    }
+
+    h4 {
+      margin-top: 20px;
+      pointer-events: none;
+      span {
+        display: none;
+      }
+    }
+
+    .contact-info {
+      width: 50vw;
+      height: 184px;
+
+      .wrapper {
+        p {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .social {
+      width: 44vw;
+      height: 164px;
+      text-align: right;
+      padding-top: 100px;
+      ul {
+        li {
+          display: inline-block;
+        }
+      }
+
+      li {
+        display: inline-block;
+      }
+    }
+
+    .categories {
+      width: 60vw;
+
+      .wrapper {
+        margin-top: 10px;
+        display: flex;
+
+        .link-box {
+          margin-right: 53px;
+
+          li {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    .about {
+      width: 34vw;
+      text-align: right;
+
+      .wrapper {
+        margin-top: 10px;
+
+        li {
+          margin: 10px 0;
         }
       }
     }
