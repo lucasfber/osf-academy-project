@@ -1,248 +1,48 @@
-.product-detail {
-  text-align: center;
-  padding: 26px 16px;
+// .product-info-tabs {
+//   padding-top: 60px;
+//   max-width: 1200px;
+//   background-color: #fff;
+//   border-bottom-left-radius: 6px;
+//   border-bottom-right-radius: 6px;
 
-  h1 {
-    font-size: 31px;
-    color: #45413e;
-  }
+//   margin-bottom: 10px;
+//   .tabs {
+//     width: 100%;
+//     text-align: center;
+//     .tab {
+//       padding: 24px 50px 27px 50px;
+//       font-size: 24px;
+//       font-weight: bold;
+//       color: #bdc3c7;
+//       outline: none;
+//     }
+//     .tab--active {
+//       background-color: #262a33;
+//       border-top-left-radius: 20px;
+//       border-top-right-radius: 20px;
+//       color: #fff;
+//     }
+//   }
 
-  .product-detailed-wrapper {
-    background-color: #fff;
-    margin-top: 64px;
-    display: flex;
-    padding: 14px 16px;
+//   .tab-info {
+//     background-color: #262b33;
+//     padding: 68px;
+//     display: none;
+//     border-bottom-left-radius: 6px;
+//     border-bottom-right-radius: 6px;
 
-    .product-detailed__image {
-      max-width: 450px;
-      width: 450px;
-      position: relative;
-      margin-right: 20px;
-      img {
-        max-width: 100%;
-        width: 450px;
-      }
-
-      span {
-        &.button-zoom {
-          position: absolute;
-          top: 14px;
-          left: 14px;
-          cursor: pointer;
-          &::before {
-            margin: 0;
-            font-size: 17px;
-            color: $light-green;
-          }
-        }
-      }
-    }
-
-    .thumbnails-slider {
-      padding: 12px;
-      width: 160px;
-      .thumbnails-box {
-        img {
-          display: block;
-          width: 60px;
-          border: 1px solid #a2a09e;
-          border-radius: 2px;
-          margin-bottom: 20px;
-          opacity: 0.6;
-          cursor: pointer;
-        }
-
-        .choosed {
-          border: 1px solid $light-green;
-          opacity: 1;
-        }
-      }
-
-      .slider-controls {
-        display: none;
-      }
-    }
-
-    .product-detailed__info {
-      text-align: left;
-      width: 500px;
-      padding: 20px 0;
-      h3 {
-        font-size: 48px;
-        color: #45413e;
-      }
-
-      .select-box {
-        position: relative;
-        width: 160px;
-        margin-top: 28px;
-        .color-choosed {
-          width: 22px;
-          height: 22px;
-          display: inline-block;
-          border-radius: 50%;
-          background-color: #585d61;
-          position: absolute;
-          top: 22%;
-          left: 10px;
-        }
-        select {
-          max-width: 100%;
-          width: 100%;
-          border: none;
-          background-color: #fff;
-          border: 2px solid #a2a09e;
-          color: #a2a09e;
-          border-radius: 20px;
-          padding: 8px 40px 8px 42px;
-          font-size: 14px;
-          outline: none;
-          @include vp-appearance(none);
-        }
-
-        span {
-          &::before {
-            font-size: 8px;
-            color: #a2a09e;
-            margin: 0;
-            position: absolute;
-            top: 15px;
-            right: 20px;
-          }
-        }
-      }
-
-      .product-detailed__quantity {
-        width: 110px;
-        position: relative;
-        margin-top: 22px;
-        display: inline-block;
-        margin-right: 16px;
-        > span {
-          position: absolute;
-          top: 6px;
-          font-size: 20px;
-          color: #999;
-          cursor: pointer;
-        }
-
-        .plus {
-          right: 15px;
-        }
-        .minus {
-          left: 15px;
-        }
-
-        input {
-          max-width: 100%;
-          width: 100%;
-          border: none;
-          background-color: #fff;
-          border: 2px solid #a2a09e;
-          color: #a2a09e;
-          border-radius: 20px;
-          padding: 8px 40px 8px 42px;
-          font-size: 14px;
-          outline: none;
-        }
-
-        input[type="number"]::-webkit-inner-spin-button,
-        input[type="number"]::-webkit-outer-spin-button {
-          @include vp-appearance(none);
-          margin: 0;
-        }
-      }
-
-      .button-add-to-cart {
-        color: #fff;
-        width: 150px;
-        background-color: $light-green;
-        border: 1px solid #fff;
-        padding: 10px 20px;
-        border-radius: 32px;
-        display: inline-block;
-        margin-top: 26px;
-        font-size: 14px;
-        outline: none;
-
-        &:hover {
-          color: $light-green;
-          border-color: $light-green;
-          background-color: #fff;
-        }
-      }
-
-      .product-detail__description {
-        color: #45413e;
-        margin-top: 32px;
-        .button-read-more {
-          display: inline-block;
-          margin-top: 15px;
-          color: $light-green;
-          cursor: pointer;
-        }
-      }
-
-      .social {
-        margin-top: 32px;
-        li {
-          display: inline-block;
-          color: #b2b2b2;
-
-          &:hover {
-            color: #888;
-          }
-        }
-      }
-    }
-  }
-}
-
-.product-info-tabs {
-  padding-top: 60px;
-  max-width: 1200px;
-  background-color: #fff;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-
-  margin-bottom: 10px;
-  .tabs {
-    width: 100%;
-    text-align: center;
-    .tab {
-      padding: 24px 50px 27px 50px;
-      font-size: 24px;
-      font-weight: bold;
-      color: #bdc3c7;
-      outline: none;
-    }
-    .tab--active {
-      background-color: #262a33;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-      color: #fff;
-    }
-  }
-
-  .tab-info {
-    background-color: #262b33;
-    padding: 68px;
-    display: none;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-
-    .tab-info__text {
-      color: #fff;
-      font-size: 16px;
-      line-height: 24px;
-      padding: 10px;
-      max-width: 50%;
-      p {
-        margin-bottom: 20px;
-      }
-    }
-  }
-  .tab-info--active {
-    display: flex;
-  }
-}
+//     .tab-info__text {
+//       color: #fff;
+//       font-size: 16px;
+//       line-height: 24px;
+//       padding: 10px;
+//       max-width: 50%;
+//       p {
+//         margin-bottom: 20px;
+//       }
+//     }
+//   }
+//   .tab-info--active {
+//     display: flex;
+//   }
+// }
