@@ -1,4 +1,4 @@
-@import "../../../node_modules/sass-autoprefixer/scss/prefixes.scss";
+@import '../../../node_modules/sass-autoprefixer/scss/prefixes.scss';
 
 .align-0 {
   text-align: left;
@@ -575,8 +575,8 @@
               outline: none;
             }
 
-            input[type="number"]::-webkit-inner-spin-button,
-            input[type="number"]::-webkit-outer-spin-button {
+            input[type='number']::-webkit-inner-spin-button,
+            input[type='number']::-webkit-outer-spin-button {
               @include vp-appearance(none);
               margin: 0;
             }
@@ -1636,7 +1636,7 @@
 
                 &::after {
                   display: table;
-                  content: "";
+                  content: '';
                   width: 70%;
                   height: 1px;
                   background-color: #ddd;
@@ -1850,7 +1850,7 @@
     }
 
     .carousel {
-      background: url("../images/slide-1.png");
+      background: url('../images/slide-1.png');
       background-repeat: no-repeat;
       background-position: center center;
       background-size: cover;
@@ -2314,7 +2314,7 @@
 
       &::after,
       &::before {
-        content: "";
+        content: '';
         display: table;
         width: 396px;
         height: 2px;
@@ -2557,8 +2557,8 @@
             outline: none;
           }
 
-          input[type="number"]::-webkit-inner-spin-button,
-          input[type="number"]::-webkit-outer-spin-button {
+          input[type='number']::-webkit-inner-spin-button,
+          input[type='number']::-webkit-outer-spin-button {
             @include vp-appearance(none);
             margin: 0;
           }
@@ -2636,7 +2636,7 @@
     .main-header::before,
     .main-header::after {
       display: table;
-      content: "";
+      content: '';
       width: 44%;
       height: 2px;
       background-color: rgba(0, 0, 0, 0.1);
@@ -2645,50 +2645,93 @@
     }
 
     .warning {
-      display: flex;
+      // display: flex;
+      // background-color: #fff;
+      // padding: 64px 100px 64px 0;
+      // overflow: auto;
+
       background-color: #fff;
-      padding: 64px 100px 64px 0;
+      display: flex;
+      padding: 64px 0 0 0;
       overflow: auto;
+      height: 550px;
 
       .warning__heading {
-        width: 50%;
+        flex-grow: 1;
+        flex-basis: 440px;
         text-align: right;
         height: 360px;
         position: relative;
         z-index: 0;
-        background-color: red;
+
+        // width: 50%;
+        // text-align: right;
+        // height: 360px;
+        // position: relative;
+        // z-index: 0;
+        // background-color: red;
 
         &::before {
-          display: table;
-          content: "";
-          background: url("../images/caution-sign.png") no-repeat;
-          background-size: 280px;
-          position: absolute;
-          z-index: 0;
-          min-width: 300px;
-          height: 300px;
-          top: 64px;
-          left: -40px;
+          display: none;
         }
 
+        &::after {
+          content: '';
+          background: url('../images/caution-sign.png') no-repeat;
+          background-size: 360px;
+          position: absolute;
+          top: 0;
+          left: -50px;
+          width: 360px;
+          height: 360px;
+          z-index: 0;
+        }
+        // sandbox tem after
+        // &::before {
+        //   display: table;
+        //   content: '';
+        //   background: url('../images/caution-sign.png') no-repeat;
+        //   background-size: 280px;
+        //   position: absolute;
+        //   z-index: 0;
+        //   min-width: 300px;
+        //   height: 300px;
+        //   top: 64px;
+        //   left: -40px;
+        // }
+
         h1 {
-          font-size: 113px;
+          font-size: 7.0625em;
           color: #84bc22;
           position: absolute;
           top: 100px;
-          right: -128px;
+          right: 0;
           z-index: 10;
+
+          // font-size: 113px;
+          // color: #84bc22;
+          // position: absolute;
+          // top: 100px;
+          // right: -128px;
+          // z-index: 10;
         }
       }
 
       .warning__message {
-        width: 50%;
         text-align: left;
-        padding: 0 0 0 100px;
-        margin: 0 0 0 100px;
+        margin: 0;
+        width: 875px;
+        padding: 0 53px;
+        //padding: 0 120px 0 60px;
+
+        // width: 50%;
+        // text-align: left;
+        // padding: 0 0 0 100px;
+        // margin: 0 0 0 100px;
 
         h3 {
           font-size: 24px;
+          margin-top: 0;
           margin-bottom: 23px;
         }
 
