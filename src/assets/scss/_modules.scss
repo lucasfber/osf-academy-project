@@ -171,6 +171,12 @@
   }
 }
 
+.button-print-page {
+  display: block;
+  margin: 0;
+  padding: 10px 30px;
+  margin-top: 20px;
+}
 .popular-items {
   padding: 32px 16px 16px 16px;
   background-color: $bg-dark;
@@ -221,7 +227,7 @@
     &::after,
     &::before {
       display: table;
-      content: "";
+      content: '';
       width: 22%;
       height: 2px;
       background-color: rgba(#fff, 0.3);
@@ -452,9 +458,9 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       display: table;
-      background: url("../images/palm-tree.png") no-repeat;
+      background: url('../images/palm-tree.png') no-repeat;
       position: absolute;
       bottom: 0;
       left: 0;

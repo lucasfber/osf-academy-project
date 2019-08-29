@@ -14,6 +14,7 @@ const $buttonPlus = $('.plus');
 const $buttonMinus = $('.minus');
 const $buttonAddToCart = $('.button-add-to-cart');
 const $buttonReadMore = $('.button-read-more');
+const $buttonPrintPage = $('.button-print-page');
 const $productImage = $('.product-detailed__image > img');
 const $productThumbnail = $('.thumbnails-box img');
 const $lastSliderDot = $('.slider-dot:nth-child(4)');
@@ -149,6 +150,14 @@ const addProductToCart = function(e) {
   let quantity = parseInt($quantityInput.val());
   addToShoppingBag(e, quantity);
 };
+
+const printCurrentPage = () => {
+  window.print();
+};
+
+$buttonPrintPage.click(function() {
+  printCurrentPage();
+});
 
 hideText();
 disposeModalOnEscKeyPressed($modalFullImage);
