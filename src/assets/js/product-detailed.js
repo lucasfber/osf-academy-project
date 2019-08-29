@@ -1,6 +1,7 @@
 import $ from '../../../node_modules/jquery/dist/jquery.slim';
 
 import { disposeModalOnEscKeyPressed } from './util';
+import { addToShoppingBag } from './action-bar';
 
 const $buttonScroll = $('.button-scroll');
 const $productDescriptionWrapper = $('.product-detail__description p');
@@ -11,6 +12,7 @@ const $buttonZoom = $('.button-zoom');
 const $buttonCloseModal = $('.modal-close');
 const $buttonPlus = $('.plus');
 const $buttonMinus = $('.minus');
+const $buttonAddToCart = $('.button-add-to-cart');
 const $buttonReadMore = $('.button-read-more');
 const $productImage = $('.product-detailed__image > img');
 const $productThumbnail = $('.thumbnails-box img');
@@ -19,6 +21,15 @@ const $sliderDots = $('.slider-dot');
 const $colorChoosed = $('.color-choosed');
 const $selectColor = $('.select-color');
 const $quantityInput = $('.product-detailed__quantity > input');
+
+let currentImageSrc;
+const characterCount = $productDescriptionWrapper.text().length;
+const fullTextDescription = $productDescriptionWrapper.text();
+let isTextHide = true;
+
+$buttonAddToCart.click(function(e) {
+  addProductToCart(e);
+});
 
 $buttonPlus.click(function() {
   increaseQuantity();
@@ -46,8 +57,6 @@ const decreaseQuantity = () => {
 $selectColor.click(function() {
   changeSelectColor($(this));
 });
-
-let currentImageSrc;
 
 $sliderDots.click(function() {
   const dotIndex = $(this).index();
@@ -97,10 +106,6 @@ $buttonZoom.click(function() {
   $modalFullImage.css('display', 'flex');
 });
 
-const characterCount = $productDescriptionWrapper.text().length;
-const fullTextDescription = $productDescriptionWrapper.text();
-let isTextHide = true;
-
 /**
  * Scrolls smoothly to the top of the page
  */
@@ -136,6 +141,14 @@ $buttonScroll.click(function() {
 $buttonReadMore.click(function() {
   toggleDescription();
 });
+
+/**
+ * Increases shopping bag's badge according to the input value
+ */
+const addProductToCart = function(e) {
+  let quantity = parseInt($quantityInput.val());
+  addToShoppingBag(e, quantity);
+};
 
 hideText();
 disposeModalOnEscKeyPressed($modalFullImage);

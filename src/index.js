@@ -27,6 +27,16 @@ $(document).ready(function() {
   let userIcon = $('.flaticon-man');
   let modalLogin = $('.modal-login');
   let modalLoginForm = $('.modal-login__form'); // is this variable really necessary?
+  const $languageDropdownLink = $('.navbar ul li:nth-child(5) a');
+  const $currencyDropdownLink = $('.navbar ul li:nth-child(6) a');
+
+  $currencyDropdownLink.click(function(e) {
+    e.preventDefault();
+  });
+
+  $languageDropdownLink.click(function(e) {
+    e.preventDefault();
+  });
 
   menuItem.click(function(e) {
     e.stopPropagation();
@@ -128,5 +138,6 @@ $(document).ready(function() {
   });
 
   setCurrentYear();
+  handleClickOutsideModal();
   disposeModalOnEscKeyPressed(modalLogin);
 });
