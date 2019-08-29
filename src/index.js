@@ -7,7 +7,7 @@ import './assets/js/product-tile-grid';
 import './assets/js/feature-products-slider';
 import './assets/js/category-landing';
 import './assets/js/product-detailed';
-//import './assets/js/cookie-policy-banner';
+import './assets/js/cookie-policy-banner';
 import './assets/js/tabs';
 
 /* Change this to Homepage.js soon */
