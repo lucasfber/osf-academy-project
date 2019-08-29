@@ -12,6 +12,14 @@
   text-align: right;
 }
 
+.breadcrumb {
+  .breadcrumb__active {
+    &:hover {
+      color: $light-green-hover;
+    }
+  }
+}
+
 .button-load-more--green {
   background-color: $light-green;
   border: none;
@@ -2177,7 +2185,7 @@
     text-align: center;
     padding: 50px 0;
     .product-tile-grid {
-      max-width: 1280px;
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       padding: 32px 0;
@@ -2302,7 +2310,7 @@
       }
 
       > button {
-        width: 200px;
+        width: 250px;
       }
     }
 
