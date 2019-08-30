@@ -1,4 +1,4 @@
-@import "../../../node_modules/sass-autoprefixer/scss/prefixes.scss";
+@import '../../../node_modules/sass-autoprefixer/scss/prefixes.scss';
 
 .services {
   .container {
@@ -18,7 +18,7 @@
 
     &::after,
     &::before {
-      content: "";
+      content: '';
       display: table;
       width: 25%;
       height: 2px;
@@ -351,8 +351,8 @@
       outline: none;
     }
 
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number']::-webkit-outer-spin-button {
       @include vp-appearance(none);
       margin: 0;
     }
@@ -441,7 +441,7 @@
   max-width: 100%;
   min-height: 470px;
   border-radius: 5px;
-  background: url("../images/slide-1.png");
+  background: url('../images/slide-1.png');
   background-repeat: no-repeat;
   background-position: center right;
   background-size: cover;
@@ -511,7 +511,7 @@
 }
 
 .osf-banner {
-  background: url("../images/banner-osf.png") no-repeat center center / cover;
+  background: url('../images/banner-osf.png') no-repeat center center / cover;
   max-width: 100%;
   min-height: 210px;
   display: flex;
@@ -557,8 +557,8 @@
 
       &::before {
         display: table;
-        content: "";
-        background: url("../images/caution-sign.png") no-repeat;
+        content: '';
+        background: url('../images/caution-sign.png') no-repeat;
         background-size: 280px;
         position: absolute;
         z-index: 0;
@@ -636,7 +636,7 @@
     background-color: #fff;
     .product-checkout {
       margin-bottom: 10px; // just for visual
-      padding: 10px;
+      padding: 20px;
       position: relative;
       border-bottom: 1px solid #ccc;
 
@@ -814,7 +814,7 @@
               left: 3px;
               display: none;
               &::after {
-                content: "";
+                content: '';
                 position: absolute;
                 display: none;
               }
