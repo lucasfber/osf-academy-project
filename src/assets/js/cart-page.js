@@ -7,12 +7,43 @@ const $cartSubtotal = $('.cart-subtotal__price span');
 const $shippingPriceInput = $('.shipping');
 const $orderTotalValue = $('.order-total-box h2');
 
+let currentShippingPrice = 0;
+
 $buttonMinus.click(function() {
   let parent = $(this).parents('.product-checkout');
   let input = $(this).siblings('.quantity-input');
-  decreaseQuantity(input);
+
+  if (decreaseQuantity(input)) {
+    setProductsPrice(parent);
+    setValues();
+  }
+});
+
+$buttonPlus.click(function() {
+  let parent = $(this).parents('.product-checkout');
+  let input = $(this).siblings('.quantity-input');
+  increaseQuantity(input);
   setProductsPrice(parent);
-  // //
+  setValues();
+  // let $productCheckout = $(this).parents('.product-checkout');
+  // setSubtotalCartValue($productCheckout);
+  // let unitPrice = $productCheckout
+  //   .children('.product-info-box')
+  //   .children('.product-info')
+  //   .children('p')
+  //   .children('.product-info__price')
+  //   .html();
+  // let input = $(this).siblings('.quantity-input');
+  // increaseQuantity(input);
+  // let price = $(this)
+  //   .parent()
+  //   .siblings('.product-price')
+  //   .children('.price-span')
+  //   .text();
+  // updateProductPrices(
+  //   $(this).parents('.product-checkout'),
+  //   parseFloat(unitPrice)
+  // );
 });
 
 const getUnitPrice = $parent => {
@@ -57,19 +88,45 @@ const setProductsPrice = $parent => {
   // console.log(totalProductsPrice.toFixed(3));
   //totalProductsPrice = totalProductsPrice.toFixed(3);
 
-  productsPrice.text(totalProductsPrice.toFixed(3));
+  productsPrice.text(totalProductsPrice.toFixed(2));
+};
+
+const setCartSubtotal = sumCartSubtotal => {
+  $cartSubtotal.text(sumCartSubtotal);
+};
+
+const getCartSubtotal = () => {
+  return parseInt($cartSubtotal.text());
+};
+
+const setTotalOrderValue = function() {
+  const cartSubTotal = getCartSubtotal();
+  console.log('sum', cartSubTotal + getCurrentShippingPrice());
+  const currentShipping = getCurrentShippingPrice();
+  console.log('current', typeof currentShippingPrice);
+  let sum = cartSubTotal + currentShipping;
+
+  $orderTotalValue.text(`$${sum}`);
+};
+
+const getCurrentShippingPrice = () => {
+  return parseInt(currentShippingPrice);
 };
 
 const setValues = () => {
   let $products = $('.product-checkout');
+  let sumCartSubtotal = 0;
 
   $products.each(function() {
     const unitPrice = getUnitPrice($(this));
     const quantity = getQuantityProduct($(this));
     const $productsPrice = getProductsPrice($(this));
     setProductsPrice($(this));
+    sumCartSubtotal = sumCartSubtotal + parseFloat($productsPrice.html());
   });
 
+  setCartSubtotal(sumCartSubtotal);
+  setTotalOrderValue();
   // let unitPrice = $productsCheckout
   //   .children('.product-info-box')
   //   .children('.product-info')
@@ -95,55 +152,29 @@ const setValues = () => {
 
 setValues();
 
-$buttonPlus.click(function() {
-  let $productCheckout = $(this).parents('.product-checkout');
+// const updateProductPrices = function($product, unitPrice) {
+//   console.log(typeof unitPrice);
+//   const $productPriceBox = $product.children('.product-price-box');
+//   const $quantityInput = $productPriceBox
+//     .children('.quantity-input-box')
+//     .children('.quantity-input');
 
-  setSubtotalCartValue($productCheckout);
+//   const $productPrice = $productPriceBox
+//     .children('.product-price')
+//     .children('.price-span');
 
-  let unitPrice = $productCheckout
-    .children('.product-info-box')
-    .children('.product-info')
-    .children('p')
-    .children('.product-info__price')
-    .html();
-
-  let input = $(this).siblings('.quantity-input');
-  increaseQuantity(input);
-
-  let price = $(this)
-    .parent()
-    .siblings('.product-price')
-    .children('.price-span')
-    .text();
-
-  updateProductPrices(
-    $(this).parents('.product-checkout'),
-    parseFloat(unitPrice)
-  );
-});
-
-const updateProductPrices = function($product, unitPrice) {
-  console.log(typeof unitPrice);
-  const $productPriceBox = $product.children('.product-price-box');
-  const $quantityInput = $productPriceBox
-    .children('.quantity-input-box')
-    .children('.quantity-input');
-
-  const $productPrice = $productPriceBox
-    .children('.product-price')
-    .children('.price-span');
-
-  const finalProductPrice = parseInt($quantityInput.val()) * unitPrice;
-  console.log('fpp', finalProductPrice);
-  $productPrice.html(finalProductPrice.toFixed(3));
-};
+//   const finalProductPrice = parseInt($quantityInput.val()) * unitPrice;
+//   console.log('fpp', finalProductPrice);
+//   $productPrice.html(finalProductPrice.toFixed(3));
+// };
 
 const decreaseQuantity = input => {
   let inputValue = parseInt(input.val());
   if (inputValue >= 2) {
     inputValue = inputValue - 1;
     input.val(inputValue);
-  }
+    return true;
+  } else return false;
 };
 
 const increaseQuantity = input => {
@@ -152,34 +183,29 @@ const increaseQuantity = input => {
   input.val(inputValue);
 };
 
-const setSubtotalCartValue = () => {
-  const $products = $('.product-checkout-wrapper .product-checkout');
-  let subtotalValue = 0;
+// const setSubtotalCartValue = () => {
+//   const $products = $('.product-checkout-wrapper .product-checkout');
+//   let subtotalValue = 0;
 
-  $products.each(function(index, element) {
-    let finalProductPrice = $(this)
-      .children('.product-price-box')
-      .children('.product-price')
-      .children('.price-span');
+//   $products.each(function(index, element) {
+//     let finalProductPrice = $(this)
+//       .children('.product-price-box')
+//       .children('.product-price')
+//       .children('.price-span');
 
-    subtotalValue = subtotalValue + parseFloat(finalProductPrice.html());
-  });
+//     subtotalValue = subtotalValue + parseFloat(finalProductPrice.html());
+//   });
 
-  $cartSubtotal.html(subtotalValue);
-  return subtotalValue;
-};
+//   $cartSubtotal.html(subtotalValue);
+//   return subtotalValue;
+// };
 
-const setOrderTotalValue = function(subTotalValue, shippingPrice) {
-  let sum = subTotalValue + shippingPrice;
-  console.log(sum);
-  $orderTotalValue.text('asd');
-};
-
-const subTotalvalue = setSubtotalCartValue();
+//const subTotalvalue = setSubtotalCartValue();
 
 $shippingPriceInput.click(function() {
-  let shippingPrice = $(this).val();
-  setOrderTotalValue(subTotalvalue, parseInt(shippingPrice));
+  currentShippingPrice = $(this).val();
+  console.log('rd', typeof currentShippingPrice);
+  setTotalOrderValue();
 });
 
-//setOrderTotalValue(subTotalvalue, shippingPrice);
+//setTotalOrderValue();
