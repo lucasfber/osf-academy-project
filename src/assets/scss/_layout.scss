@@ -1,4 +1,4 @@
-@import '../../../node_modules/sass-autoprefixer/scss/prefixes.scss';
+@import "../../../node_modules/sass-autoprefixer/scss/prefixes.scss";
 
 .services {
   .container {
@@ -18,7 +18,7 @@
 
     &::after,
     &::before {
-      content: '';
+      content: "";
       display: table;
       width: 25%;
       height: 2px;
@@ -351,8 +351,8 @@
       outline: none;
     }
 
-    input[type='number']::-webkit-inner-spin-button,
-    input[type='number']::-webkit-outer-spin-button {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
       @include vp-appearance(none);
       margin: 0;
     }
@@ -441,7 +441,7 @@
   max-width: 100%;
   min-height: 470px;
   border-radius: 5px;
-  background: url('../images/slide-1.png');
+  background: url("../images/slide-1.png");
   background-repeat: no-repeat;
   background-position: center right;
   background-size: cover;
@@ -511,7 +511,7 @@
 }
 
 .osf-banner {
-  background: url('../images/banner-osf.png') no-repeat center center / cover;
+  background: url("../images/banner-osf.png") no-repeat center center / cover;
   max-width: 100%;
   min-height: 210px;
   display: flex;
@@ -557,8 +557,8 @@
 
       &::before {
         display: table;
-        content: '';
-        background: url('../images/caution-sign.png') no-repeat;
+        content: "";
+        background: url("../images/caution-sign.png") no-repeat;
         background-size: 280px;
         position: absolute;
         z-index: 0;
@@ -628,6 +628,228 @@
   }
 }
 
+.cart-page {
+  padding: 20px 16px;
+  background-color: $main-background;
+
+  .product-checkout-wrapper {
+    background-color: #fff;
+    .product-checkout {
+      margin-bottom: 10px; // just for visual
+      padding: 10px;
+      position: relative;
+      border-bottom: 1px solid #ccc;
+
+      img {
+        max-width: 70px;
+        height: 70px;
+        margin-right: 2%;
+      }
+
+      .product-info-box {
+        display: flex;
+
+        .product-info {
+          h5 {
+            font-size: 16px;
+            font-weight: normal;
+          }
+          p {
+            margin-top: 5px;
+            color: #aaa; // change to bbb
+          }
+        }
+      }
+
+      .product-price-box {
+        display: flex;
+        margin-top: 15px;
+        align-items: center;
+        justify-content: space-between;
+        .quantity-input-box {
+          position: relative;
+          color: #a2a09e;
+
+          input {
+            max-width: 120px;
+            width: 100%;
+            border: none;
+            background-color: #fff;
+            border: 2px solid #a2a09e;
+            border-radius: 16px;
+            padding: 6px 25px;
+            text-align: center;
+            color: #a2a09e;
+            font-size: 14px;
+            outline: none;
+          }
+
+          .plus,
+          .minus {
+            top: 5px;
+            position: absolute;
+            font-size: 18px;
+          }
+          .plus {
+            right: 15%;
+          }
+          .minus {
+            left: 15%;
+          }
+        }
+
+        h3 {
+          font-size: 24px;
+          margin-right: 10px;
+        }
+      }
+
+      .button-remove-product {
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        width: 22px;
+        height: 22px;
+        border-radius: 32px;
+        border: 1px solid #bbb;
+        text-align: center;
+        cursor: pointer;
+        i {
+          &::before {
+            margin: 0;
+            font-size: 7px;
+          }
+        }
+      }
+    }
+  }
+
+  .checkout-details {
+    background-color: #fff;
+    padding: 16px 10px;
+
+    .coupon-box {
+      input {
+        margin: 0 auto;
+        width: 60%;
+        padding: 7px;
+        padding-left: 13px;
+        border: none;
+        font-size: 14px;
+        border-radius: 24px;
+        outline: none;
+        border: 2px solid #ccc;
+        font-size: 12px;
+        margin-right: 11px;
+        color: #000;
+      }
+
+      button {
+        border: 2px solid $light-green;
+        color: $light-green;
+        padding: 7px 25px;
+        border-radius: 32px;
+        font-size: 13px;
+      }
+    }
+
+    .checkout-final-details {
+      margin-top: 20px;
+      text-align: center;
+
+      .button-update-cart,
+      .button-proceed-checkout {
+        border: 2px solid $light-green;
+        color: $light-green;
+        padding: 7px 25px;
+        border-radius: 32px;
+        font-size: 13px;
+        max-width: 100%;
+      }
+
+      .button-proceed-checkout {
+        margin-top: 10px;
+        background-color: $light-green;
+        color: #fff;
+      }
+
+      .cart-subtotal-box,
+      .shipping-box,
+      .order-total-box {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .cart-subtotal-box {
+        justify-content: space-between;
+
+        .cart-subtotal__price {
+          font-weight: bold;
+        }
+      }
+
+      .shipping-box {
+        justify-content: space-between;
+        p {
+          width: 30px;
+          font-weight: bold;
+        }
+        .shipping-types {
+          text-align: left;
+
+          label {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            position: relative;
+
+            .radio-mark {
+              position: absolute;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background-color: $light-green;
+              top: 5px;
+              left: 3px;
+              display: none;
+              &::after {
+                content: "";
+                position: absolute;
+                display: none;
+              }
+            }
+
+            input {
+              margin-right: 5px;
+
+              &:checked {
+                ~ .radio-mark {
+                  display: block;
+                }
+              }
+            }
+
+            .shipping-price {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+
+      .order-total-box {
+        justify-content: space-between;
+        p {
+          font-weight: bold;
+        }
+        h2 {
+          margin-right: 10px;
+          font-size: 32px;
+        }
+      }
+    }
+  }
+}
 // 404 page
 main {
   margin-top: 83px;

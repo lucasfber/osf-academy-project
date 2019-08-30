@@ -212,37 +212,57 @@
         <div class="checkout">
           <div class="product-checkout-wrapper">
             <div class="product-checkout">
-              <img src="" alt="" />
-              <div class="product-info">
-                <p>Kristina Dam Oak Table With White Mable Top</p>
-                <p>$ 2.195.00</p>
+              <div class="product-info-box">
+                <img src="img/product-1.png" alt="Thumbnail Product" />
+                <div class="product-info">
+                  <h5 class="product-info__title">
+                    Kristina Dam Oak Table With White Mable Top
+                  </h5>
+                  <p>$ <span class="product-info__price">2.195.00</span></p>
+                </div>
               </div>
-              <input type="text" class="quantity-input" />
-              <h3 class="product-price">
-                $ <span class="price-span">2,195</span>
-              </h3>
+              <div class="product-price-box">
+                <div class="quantity-input-box">
+                  <span class="minus">&minus;</span>
+                  <input type="number" class="quantity-input" value="1" />
+                  <span class="plus">&plus;</span>
+                </div>
+                <h3 class="product-price">
+                  $ <span class="price-span">2,195</span>
+                </h3>
+              </div>
               <span class="button-remove-product">
                 <i class="flaticon-cancel"></i>
               </span>
             </div>
             <div class="product-checkout">
-              <img src="" alt="" />
-              <div class="product-info">
-                <p>Kristina Dam Oak Table With White Mable Top</p>
-                <p>$ 2.195.00</p>
-              </div>
-              <input type="text" class="quantity-input" />
-              <h3 class="product-price">
-                $ <span class="price-span">2,195</span>
-              </h3>
-              <span class="button-remove-product">
-                <i class="flaticon-cancel"></i>
-              </span>
+                <div class="product-info-box">
+                  <img src="img/product-5.png" alt="Thumbnail Product" />
+                  <div class="product-info">
+                    <h5 class="product-info__title">
+                      Active Facial Mask and Charcoal Soap
+                    </h5>
+                    <p>$ <span class="product-info__price">1.249.00</span></p>
+                  </div>
+                </div>
+                <div class="product-price-box">
+                  <div class="quantity-input-box">
+                    <span class="minus">&minus;</span>
+                    <input type="number" class="quantity-input" value="1" />
+                    <span class="plus">&plus;</span>
+                  </div>
+                  <h3 class="product-price">
+                    $ <span class="price-span">1,249</span>
+                  </h3>
+                </div>
+                <span class="button-remove-product">
+                  <i class="flaticon-cancel"></i>
+                </span>
             </div>
           </div>
           <div class="checkout-details">
             <div class="coupon-box">
-              <input type="text" />
+              <input type="text" placeholder="Enter Coupon Code"/>
               <button>APPLY</button>
             </div>
             <div class="checkout-final-details">
@@ -251,25 +271,41 @@
                 PROCEED TO CHECKOUT
               </button>
               <div class="cart-subtotal-box">
-                <p>CART SUBTOTAL:</p>
-                <p>$ 3,489</p>
+                <p class="cart-subtotal__label">CART SUBTOTAL:</p>
+                <p class="cart-subtotal__price">$ <span>3,489</span></p>
               </div>
               <div class="shipping-box">
                 <p>SHIPPING AND HANDLING</p>
                 <div class="shipping-types">
-                  <input type="radio" name="shipping" value="10.00" />Flat Rate:
+                  <label>
+                      <input checked type="radio" name="shipping" value="10.00" />
+                      Flat Rate:
                   <span class="shipping-price">$10.00</span>
-                  <input type="radio" name="shipping" value="0" />Free Shipping:
-                  <span class="shipping-price"></span>
-                  <input
-                    type="radio"
-                    name="shipping"
-                    value="60.00"
-                  />International: <span class="shipping-price">$60.00</span>
-                  <input type="radio" name="shipping" value="5.00" />Local
-                  Delivery: <span class="shipping-price">$5.00</span>
-                  <input type="radio" name="shipping" value="0" />Local Pickup
-                  (Free): <span class="shipping-price"></span>
+                  <span class="radio-mark"></span>
+                  </label>
+                  <label>
+                      <input type="radio" name="shipping" value="0" />Free Shipping:
+                      <span class="shipping-price"></span>
+                      <span class="radio-mark"></span>
+                  </label>
+                  <label>
+                      <input
+                      type="radio"
+                      name="shipping"
+                      value="60.00"
+                    />International: <span class="shipping-price">$60.00</span>
+                    <span class="radio-mark"></span>
+                  </label>
+                  <label>
+                      <input type="radio" name="shipping" value="5.00" />Local
+                      Delivery: <span class="shipping-price">$5.00</span>
+                      <span class="radio-mark"></span>
+                  </label>
+                  <label>
+                      <input type="radio" name="shipping" value="0" />Local Pickup
+                      (Free): <span class="shipping-price"></span>
+                      <span class="radio-mark"></span>
+                  </label>
                 </div>
               </div>
               <div class="order-total-box">
