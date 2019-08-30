@@ -1,5 +1,4 @@
 import $ from '../../../node_modules/jquery/dist/jquery.min';
-import { addToShoppingBag, addToWishlist } from './action-bar';
 import { shuffle, createProductTile } from './product-tile-grid';
 /**
  * @constant
@@ -54,6 +53,9 @@ const createProductTileRow = (slicedData, $insertBefore) => {
   });
 };
 
+/**
+ * Get the client's screen width, to acts according the width size
+ */
 const getClientWidth = () => {
   return $(window).width();
 };

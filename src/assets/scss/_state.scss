@@ -1,3 +1,7 @@
+/**
+ * SMACSS rule to handle how a component changes when on hover, on media queries
+ */
+
 @import '../../../node_modules/sass-autoprefixer/scss/prefixes.scss';
 
 .align-0 {
@@ -68,7 +72,7 @@
   background-color: #fff;
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .products-tile-wrapper {
     button {
       &.button-load-more.button-load-more--green {
@@ -293,6 +297,10 @@
           font-weight: bold;
           font-size: 14px;
           color: #fff;
+
+          span {
+            color: #939599;
+          }
         }
 
         span {

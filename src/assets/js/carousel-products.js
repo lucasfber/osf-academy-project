@@ -7,6 +7,9 @@ setFirstSlideVisible();
 
 dots.click(setCurrentSlide);
 
+/**
+ * Handle the current slide change
+ */
 function setCurrentSlide(e) {
   productsSlides.children().css('display', 'none');
 
@@ -20,6 +23,9 @@ function setCurrentSlide(e) {
     .css('display', 'block');
 }
 
+/**
+ * Change the dot's style to show it is visbile
+ */
 function setActiveDot(e) {
   dots.removeClass();
   dots.addClass('products-slider__dot');
@@ -29,6 +35,9 @@ function setActiveDot(e) {
     .addClass('products-slider__dot active');
 }
 
+/**
+ * Sets the first child product tile to visible
+ */
 function setFirstSlideVisible() {
   productsSlides
     .children()

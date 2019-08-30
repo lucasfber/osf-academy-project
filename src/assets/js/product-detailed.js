@@ -40,6 +40,9 @@ $buttonMinus.click(function() {
   decreaseQuantity();
 });
 
+/**
+ * Changes the input's quantity, increasing by 1
+ */
 const increaseQuantity = () => {
   let currentQuantity = parseInt($quantityInput.val());
 
@@ -47,6 +50,9 @@ const increaseQuantity = () => {
   $quantityInput.val(currentQuantity);
 };
 
+/**
+ * Changes the input's quantity, decreasing by 1
+ */
 const decreaseQuantity = () => {
   let currentQuantity = parseInt($quantityInput.val());
   if (currentQuantity >= 2) {
@@ -59,6 +65,9 @@ $selectColor.click(function() {
   changeSelectColor($(this));
 });
 
+/**
+ * Move slides according to the dot clicked
+ */
 $sliderDots.click(function() {
   const dotIndex = $(this).index();
   moveSlider(dotIndex);
@@ -66,16 +75,25 @@ $sliderDots.click(function() {
   setCurrentDotActive($(this));
 });
 
+/**
+ * Changes color when the user choose an option on select
+ */
 const changeSelectColor = selectInput => {
   const optionValue = selectInput.val();
   $colorChoosed.css('background-color', optionValue);
 };
 
+/**
+ * Puts a border on active slider's dot
+ */
 function setCurrentDotActive($dot) {
   $sliderDots.removeClass('active');
   $dot.addClass('slider-dot active');
 }
 
+/**
+ * Changes the 3 thumbnails images on slider, according with the choosen dot
+ */
 function moveSlider(dotIndex) {
   if (dotIndex === 3) {
     $productThumbnail.get(0).src = `img/pg-2.jpg`;
@@ -88,6 +106,9 @@ function moveSlider(dotIndex) {
   }
 }
 
+/**
+ * Changes the current product image, when the user click on a thumbnail
+ */
 $productThumbnail.click(function(e) {
   let currentThumbnailSrc = $(this).attr('src');
   $productThumbnail.removeClass();
@@ -100,6 +121,9 @@ $buttonCloseModal.click(function() {
   $modalFullImage.hide();
 });
 
+/**
+ * Open the full product image modal
+ */
 $buttonZoom.click(function() {
   let productImageSrc = $productImage.attr('src');
   $modalImage.attr('src', productImageSrc);
@@ -114,6 +138,9 @@ const scrollToTop = () => {
   document.documentElement.scrollTop = 0;
 };
 
+/**
+ * Hides description text
+ */
 const hideText = () => {
   if (characterCount > 100) {
     $productDescriptionWrapper.text(
@@ -125,11 +152,17 @@ const hideText = () => {
   }
 };
 
+/**
+ * Shows description text
+ */
 const showText = () => {
   $productDescriptionWrapper.text(fullTextDescription);
   $buttonReadMore.text('Show less');
 };
 
+/**
+ * Alterns flag to show/hide the description text
+ */
 const toggleDescription = () => {
   isTextHide ? showText() : hideText();
   isTextHide = !isTextHide;
@@ -151,6 +184,9 @@ const addProductToCart = function(e) {
   addToShoppingBag(e, quantity);
 };
 
+/**
+ * Calls the default printer to print out the page according to FSD
+ */
 const printCurrentPage = () => {
   window.print();
 };
@@ -160,4 +196,8 @@ $buttonPrintPage.click(function() {
 });
 
 hideText();
+
+/**
+ * Dispose modal when the user clicks on ESC key
+ */
 disposeModalOnEscKeyPressed($modalFullImage);

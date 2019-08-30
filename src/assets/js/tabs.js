@@ -4,6 +4,9 @@ const $tab = $('.tab');
 const $tabs = $('.tabs');
 const $tabInfoWrapper = $('.tab-info-wrapper');
 
+/**
+ * Changes to the active tab, updating the class
+ */
 const changeActiveTab = index => {
   $tabs.children().removeClass();
   $tabs.children().addClass('tab');
@@ -13,6 +16,9 @@ const changeActiveTab = index => {
     .addClass('tab tab--active');
 };
 
+/**
+ * Shows the info associated with the choosen tab
+ */
 const changeActiveTabInfo = index => {
   $tabInfoWrapper.children().removeClass();
   $tabInfoWrapper.children().addClass('tab-info');
@@ -22,6 +28,9 @@ const changeActiveTabInfo = index => {
     .addClass('tab-info tab-info--active');
 };
 
+/**
+ * Changes the active tab, and its info. calling changeActiveTabInfo and changeActiveTab functions
+ */
 function showCurrentActiveTab($clickedTab) {
   let index = $clickedTab.index();
 

@@ -9,6 +9,10 @@ $buttonLT.click(showFirstSlides);
 
 $buttonGT.click(showSecondSlides);
 
+/**
+ * Show the first four slides
+ *
+ */
 function showFirstSlides() {
   $('.featured-products-slider .product-tile')
     .slice(0, 4)

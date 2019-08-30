@@ -43,4 +43,4 @@ $buttonAccept.click(function() {
   handleAcceptCookiePolicy();
 });
 
-setTimeout(showCookiePolicyBanner, 4000);
+setTimeout(showCookiePolicyBanner, 10000);
